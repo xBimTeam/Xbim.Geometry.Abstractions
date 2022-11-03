@@ -2,8 +2,6 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.0; netcoreapp3.1; net6.0</TargetFrameworks>
-		<OutputPath>..\Output\$(Configuration)\$(Platform)</OutputPath>
-		
 		<Version>6.1.304-develop</Version>
 		<Configurations>Debug;Release</Configurations>
 		<Platforms>AnyCPU</Platforms>
