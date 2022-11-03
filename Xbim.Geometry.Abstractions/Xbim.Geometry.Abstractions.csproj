@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0; netcoreapp3.1; net6.0</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0</TargetFrameworks>
 		<Version>6.1.304-develop</Version>
 		<Configurations>Debug;Release</Configurations>
 		<Platforms>AnyCPU</Platforms>
 		<LangVersion>9.0</LangVersion>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
 		<PackageLicenseExpression></PackageLicenseExpression>
 		<Authors>Steve Lockley</Authors>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -37,6 +37,6 @@
 	  </None>
 	</ItemGroup>
 	<ItemGroup>
-		<None Include="xbim-toolkit-icon.png" Pack="True" PackagePath="\" />
+		<None Include="../xbim-toolkit-icon.png" Pack="True" PackagePath="\" />
 	</ItemGroup>
 </Project>
