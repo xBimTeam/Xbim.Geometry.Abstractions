@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0; netcoreapp3.1; net6.0</TargetFrameworks>
+		<OutputPath>..\Output\$(Configuration)\$(Platform)</OutputPath>
+		<PackageIcon>xbim-toolkit-icon.png</PackageIcon>
+		<Version>6.1.304-develop</Version>
+		<Configurations>Debug;Release</Configurations>
+		<Platforms>AnyCPU</Platforms>
+		<LangVersion>9.0</LangVersion>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageLicenseExpression></PackageLicenseExpression>
+		<Authors>Steve Lockley</Authors>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+	</PropertyGroup>
+	
+	
+	<ItemGroup>
+		<None Include="..\Xbim.Geometry.Services\xbim-toolkit-icon.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Xbim.Essentials" Version="5.1.348-develop" />
+	</ItemGroup>
+
+</Project>
