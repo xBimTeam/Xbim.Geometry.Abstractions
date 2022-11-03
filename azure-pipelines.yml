@@ -1,0 +1,57 @@
+# Yaml Pipeline Tasks for reference: https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/index?view=vsts
+
+trigger:
+  branches:
+    include:
+    - master
+    - develop
+  paths:
+    exclude:
+    - README.md
+    - CHANGELOG.md
+    - CONTRIBUTING.md
+    
+pool:
+  vmImage: 'windows-2019'
+
+variables:
+  solution: '*.sln'
+  BuildConfiguration: 'Release'
+  BuildPlatform: 'Any CPU'
+  major: 6
+  minor: 0
+
+  # creates a named counter and seeds it at 100 and then assigns the value to a variable named buildNo.
+  buildNo: $[counter('winversioncounter', 100)]
+  
+name: $(BuildDefinitionName)_$(SourceBranchName)_$(major).$(minor).$(buildNo)
+
+steps:
+# Windows script setting up  $(packageversion) of the nuget package based on branch
+# Master branch
+- script: |
+    echo ##vso[task.setvariable variable=packageversion]$(major).$(minor).$(buildNo)
+  displayName: 'Setting Nuget PackageVersion'
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
+# Any other branch
+- script: |
+    echo ##vso[task.setvariable variable=packageversion]$(major).$(minor).$(buildNo)-$(Build.SourceBranchName)
+  displayName: 'Setting Prerelease Nuget PackageVersion'
+  condition: ne(variables['Build.SourceBranch'], 'refs/heads/master')
+
+
+
+# Windows script setting up $(fileversion) used to stamp AssemblyFileVersions. 
+# By convention we use 'Major.Minor.BuildNo.0' on Master and 'Major.Minor.0.BuildNo' on other branches
+# Master branch
+- script: | 
+    echo ##vso[task.setvariable variable=fileversion]$(major).$(minor).$(buildNo).0
+  displayName: 'Setting FileVersion'
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
+# Any other branch
+- script: | 
+    echo ##vso[task.setvariable variable=fileversion]$(major).$(minor).0.$(buildNo)
+  displayName: 'Setting Prerelease FileVersion'
+  condition: ne(variables['Build.SourceBranch'], 'refs/heads/master')
+
+
