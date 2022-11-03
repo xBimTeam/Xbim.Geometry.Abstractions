@@ -27,12 +27,7 @@ variables:
 name: $(BuildDefinitionName)_$(SourceBranchName)_$(major).$(minor).$(buildNo)
 
 steps:
-- task: UseDotNet@2
-  displayName: 'Use .NET Core 6.0 sdk'
-  inputs:
-    packageType: sdk
-    version: 6.0.10
-    installationPath: $(Agent.ToolsDirectory)/dotnet
+
 # Windows script setting up  $(packageversion) of the nuget package based on branch
 # Master branch
 - script: |
