@@ -24,7 +24,7 @@
 
 	
 	<ItemGroup>
-		<PackageReference Include="Xbim.Essentials" Version="5.1.348-develop" />
+		<PackageReference Include="Xbim.Essentials" Version="5.1.361-develop" />
 	</ItemGroup>
 
 	<ItemGroup>
