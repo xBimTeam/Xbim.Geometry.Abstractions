@@ -55,6 +55,7 @@ steps:
   displayName: 'Setting Prerelease FileVersion'
   condition: ne(variables['Build.SourceBranch'], 'refs/heads/master')
 - task: DotNetCoreCLI@2
+  displayName: 'Restoring packages'
   inputs:
     command: 'restore'
     projects: '**/*.csproj'
@@ -62,11 +63,13 @@ steps:
     nugetConfigPath: 'nuget.config'
     externalFeedCredentials: 'MyGetDev, MyGetMaster'
 - task: DotNetCoreCLI@2
+  displayName: 'Packing'
   inputs:
     command: 'pack'
     packagesToPack: '**/*.csproj'
     versioningScheme: 'off'
 - task: DotNetCoreCLI@2
+  displayName: 'Pushing to Master'
   condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
   inputs:
     command: 'push'
@@ -74,6 +77,7 @@ steps:
     nuGetFeedType: 'external'
     publishFeedCredentials: 'MyGetMaster'
 - task: DotNetCoreCLI@2
+  displayName: 'Pushing to Develop'
   condition: ne(variables['Build.SourceBranch'], 'refs/heads/master')
   inputs:
     command: 'push'
