@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.0; netcoreapp3.1; net6.0</TargetFrameworks>
 		<OutputPath>..\Output\$(Configuration)\$(Platform)</OutputPath>
-		<PackageIcon>xbim-toolkit-icon.png</PackageIcon>
+		
 		<Version>6.1.304-develop</Version>
 		<Configurations>Debug;Release</Configurations>
 		<Platforms>AnyCPU</Platforms>
@@ -12,18 +12,33 @@
 		<PackageLicenseExpression></PackageLicenseExpression>
 		<Authors>Steve Lockley</Authors>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<Title>Xbim Geometry Interfaces</Title>
+		<Description>Interface classes for version 6 of the Xbim Geometry Engine</Description>
+		<Copyright>Xbim Ltd.</Copyright>
+		<Company>Xbim Ltd.</Company>
+		
+		<RepositoryUrl>https://github.com/xBimTeam/Xbim.Geometry.Abstractions</RepositoryUrl>
+		<PackageTags>Xbim;BRep;Geometry;Interfaces</PackageTags>
+		<PackageReleaseNotes>This is the initial release of the Geometry Interfaces for version 6 of the Xbim Geometry Engine</PackageReleaseNotes>
 	</PropertyGroup>
-	
-	
-	<ItemGroup>
-		<None Include="..\Xbim.Geometry.Services\xbim-toolkit-icon.png">
-			<Pack>True</Pack>
-			<PackagePath></PackagePath>
-		</None>
-	</ItemGroup>
 
+	
 	<ItemGroup>
 		<PackageReference Include="Xbim.Essentials" Version="5.1.348-develop" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Update="README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Update="xbim-toolkit-icon.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="xbim-toolkit-icon.png" Pack="True" PackagePath="\" />
+	</ItemGroup>
 </Project>
