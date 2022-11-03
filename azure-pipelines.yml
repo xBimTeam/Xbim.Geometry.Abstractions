@@ -19,10 +19,10 @@ variables:
   BuildConfiguration: 'Release'
   BuildPlatform: 'Any CPU'
   major: 6
-  minor: 1
+  minor: 2
 
   # creates a named counter and seeds it at 100 and then assigns the value to a variable named buildNo.
-  buildNo: $[counter('winversioncounter', 400)]
+  buildNo: $[counter('winversioncounter', 100)]
   
 name: $(BuildDefinitionName)_$(SourceBranchName)_$(major).$(minor).$(buildNo)
 
