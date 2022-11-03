@@ -68,7 +68,7 @@ steps:
     command: 'pack'
     packagesToPack: '**/*.csproj'
     versioningScheme: 'off'
-- task: DotNetCoreCLI@2
+- task: NuGetCommand@2
   displayName: 'Pushing to Master'
   condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
   inputs:
@@ -76,7 +76,9 @@ steps:
     packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
     nuGetFeedType: 'external'
     publishFeedCredentials: 'MyGetMaster'
-- task: DotNetCoreCLI@2
+    versioningScheme: byEnvVar
+    versionEnvVar: packageVersion
+- task: NuGetCommand@2
   displayName: 'Pushing to Develop'
   condition: ne(variables['Build.SourceBranch'], 'refs/heads/master')
   inputs:
@@ -84,3 +86,5 @@ steps:
     packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
     nuGetFeedType: 'external'
     publishFeedCredentials: 'MyGetDev'
+    versioningScheme: byEnvVar
+    versionEnvVar: packageVersion
