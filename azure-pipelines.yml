@@ -22,7 +22,7 @@ variables:
   minor: 1
 
   # creates a named counter and seeds it at 100 and then assigns the value to a variable named buildNo.
-  buildNo: $[counter('winversioncounter', 100)]
+  buildNo: $[counter('winversioncounter', 400)]
   
 name: $(BuildDefinitionName)_$(SourceBranchName)_$(major).$(minor).$(buildNo)
 
