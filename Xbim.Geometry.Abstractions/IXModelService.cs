@@ -4,9 +4,23 @@ using Xbim.Ifc4.Interfaces;
 
 namespace Xbim.Geometry.Abstractions
 {
-    public interface IXModelService 
+    public interface IXModelService
     {
+        IXLoggingService LoggingService { get; }
+
+        IXGeometryFactory GeometryFactory { get; }
+        IXCurveFactory CurveFactory { get; }
+        IXSurfaceFactory SurfaceFactory { get; }
+
+        IXEdgeFactory EdgeFactory { get; }
+        IXWireFactory WireFactory { get; }
        
+        IXFaceFactory FaceFactory { get; }
+        IXShellFactory ShellFactory { get; }
+        IXSolidFactory SolidFactory { get; }
+        IXCompoundFactory CompoundFactory { get; }
+        IXBooleanFactory BooleanFactory { get; }
+
         double Timeout { get; set; }
         /// <summary>
         /// The distance between two points less than or equal to which they are determined to be coincidental
@@ -47,7 +61,7 @@ namespace Xbim.Geometry.Abstractions
         /// </summary>
         /// <param name="model"></param>       
         void SetModel(IModel model);
-       
+
         /// <summary>
         /// Gets a set of 3d Gemtric representation contexts, is adaptive to queiks in how models have been set up by different vendors
         /// </summary>
