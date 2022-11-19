@@ -3,7 +3,6 @@ namespace Xbim.Geometry.Abstractions
 {
     public enum XCurveType
     {
-        IfcBoundedCurve,
         IfcBSplineCurveWithKnots,
         IfcCircle,
         IfcCompositeCurve,
