@@ -10,12 +10,10 @@ namespace Xbim.Geometry.Abstractions
         double Distance(IXPoint a, IXPoint b);
         double IsEqual(IXPoint a, IXPoint b, double tolerance);
         IXDirection NormalAt(IXFace face, IXPoint position, double tolerance);
-        IXPoint BuildPoint(double x, double y, double z);
-        IXDirection BuildDirection(double x, double y, double z);
-        IXVisualMaterial BuildVisualMaterial(string name, IIfcSurfaceStyleElementSelect styling);
-        IXVisualMaterial BuildVisualMaterial(string name);
-        IXColourRGB BuildColourRGB(double red, double green, double blue);
-        IXShapeColour BuildShapeColour(string name, IIfcSurfaceStyleElementSelect surfaceStyle);
+        IXPoint BuildPoint3d(double x, double y, double z);
+        IXPoint BuildPoint2d(double x, double y);
+        IXDirection BuildDirection3d(double x, double y, double z);
+        IXDirection BuildDirection2d(double x, double y);
         IXLocation BuildLocation(double tx, double ty, double tz, double sc, double qw, double qx, double qy, double qz);
     }
 }
