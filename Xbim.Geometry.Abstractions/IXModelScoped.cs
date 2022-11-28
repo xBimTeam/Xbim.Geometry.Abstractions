@@ -2,7 +2,7 @@
 {
     public interface IXModelScoped
     {      
-        IXModelService ModelService { get; }
+        IXModelGeometryService ModelService { get; }
         IXLoggingService LoggingService { get; }
     }
 }
