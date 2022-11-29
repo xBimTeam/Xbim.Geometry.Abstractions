@@ -7,8 +7,8 @@ namespace Xbim.Geometry.Abstractions
     public interface IXShapeFactory : IXModelScoped
     {
 		IXShape Convert(string shape);
-		IXbimGeometryObject ConvertToV5(string brepStr);
-		IXbimGeometryObject ConvertToV5(IXShape shape);
+		//IXbimGeometryObject ConvertToV5(string brepStr);
+		//IXbimGeometryObject ConvertToV5(IXShape shape);
 		string Convert(IXShape shape);
 		string Convert(IXbimGeometryObject shape);
 
