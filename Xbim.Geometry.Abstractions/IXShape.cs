@@ -24,5 +24,6 @@ namespace Xbim.Geometry.Abstractions
         IEnumerable<IXFace> AllFaces();
         bool IsEqual(IXShape other);
         int ShapeHashCode();
+        XOrientation Orientation { get; }
     }
 }
