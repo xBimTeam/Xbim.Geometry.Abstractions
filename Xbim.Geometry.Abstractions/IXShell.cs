@@ -6,6 +6,6 @@ namespace Xbim.Geometry.Abstractions
     {
         //Surface Area in default model units, use IXGeometryPropertyService to get surface areas in a specific imperial or metric unit system
         double SurfaceArea { get; }
-        IEnumerable<IXFace> Faces { get; }
+        IXFace[] Faces { get; }
     }
 }

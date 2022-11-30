@@ -60,34 +60,34 @@ namespace Xbim.Geometry.Abstractions
         /// <summary>
         /// Returns enumeration of all the top level compounds
         /// </summary>
-        IEnumerable<IXCompound> Compounds { get; }
+        IXCompound[] Compounds { get; }
         /// <summary>
         /// Returns enumeration of all the top level solids
         /// </summary>
-        IEnumerable<IXSolid> Solids { get; }
+        IXSolid[] Solids { get; }
         /// <summary>
         /// Returns enumeration of all the top level shells
         /// </summary>
-        IEnumerable<IXShell> Shells { get; }
+        IXShell[] Shells { get; }
         /// <summary>
         /// Returns enumeration of all the top level faces
         /// </summary>
-        IEnumerable<IXFace> Faces { get; }
+        IXFace[] Faces { get; }
 
         /// <summary>
         /// Returns enumeration of all the top level wires
         /// </summary>
-        IEnumerable<IXWire> Wires { get; }
+        IXWire[] Wires { get; }
         
         /// <summary>
         /// Returns enumeration of all the top level edges
         /// </summary>
-        IEnumerable<IXEdge> Edges { get; }
+        IXEdge[] Edges { get; }
 
         /// <summary>
         /// Returns enumeration of all the top level vertices
         /// </summary>
-        IEnumerable<IXVertex> Vertices { get; }
+        IXVertex[] Vertices { get; }
 
         void Add(IXShape shape);
 

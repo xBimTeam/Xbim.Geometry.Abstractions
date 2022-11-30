@@ -8,7 +8,7 @@ namespace Xbim.Geometry.Abstractions
         double Length { get; }
         //Area of the wire in default model units, e IXGeometryPropertyService to get lengths in a specific imperial or metric unit system
         double Area { get; }
-        IEnumerable<IXEdge> EdgeLoop { get; }
+        IXEdge[] EdgeLoop { get; }
         
     }
 }

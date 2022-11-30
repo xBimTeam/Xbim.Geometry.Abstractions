@@ -8,7 +8,7 @@ namespace Xbim.Geometry.Abstractions
         double Area { get; }
         double Tolerance { get; }
         IXWire OuterBound { get; }
-        IEnumerable<IXWire> InnerBounds { get; }
+        IXWire[] InnerBounds { get; }
         IXSurface Surface { get; }
         
     }

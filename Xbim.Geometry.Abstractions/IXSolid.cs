@@ -6,6 +6,6 @@ namespace Xbim.Geometry.Abstractions
     {
         //Volume in default model units, use IXGeometryPropertyService to get volumes in a specific imperial or metric unit system
         double Volume { get; }
-        IEnumerable<IXShell> Shells { get; }  
+        IXShell[] Shells { get; }  
     }
 }
