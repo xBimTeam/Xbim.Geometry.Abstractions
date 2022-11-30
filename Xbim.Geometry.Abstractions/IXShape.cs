@@ -23,5 +23,6 @@ namespace Xbim.Geometry.Abstractions
         IXLocation Location { get; }
         IEnumerable<IXFace> AllFaces();
         bool IsEqual(IXShape other);
+        int ShapeHashCode();
     }
 }
