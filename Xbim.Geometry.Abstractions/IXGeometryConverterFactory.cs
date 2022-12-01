@@ -21,5 +21,6 @@ namespace Xbim.Geometry.Abstractions
         /// </summary>
         IXModelGeometryService CreateModelGeometryService(IModel model, ILoggerFactory loggerFactory);
 
+        IXbimGeometryEngine CreateGeometryEngine(XGeometryEngineVersion version,  IModel model, ILoggerFactory loggerFactory);
     }
 }
