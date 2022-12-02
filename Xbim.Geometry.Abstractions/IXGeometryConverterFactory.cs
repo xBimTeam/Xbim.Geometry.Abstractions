@@ -22,5 +22,12 @@ namespace Xbim.Geometry.Abstractions
         IXModelGeometryService CreateModelGeometryService(IModel model, ILoggerFactory loggerFactory);
 
         IXbimGeometryEngine CreateGeometryEngine(XGeometryEngineVersion version,  IModel model, ILoggerFactory loggerFactory);
+
+        /// <summary>
+        /// Gets the underlying modelgeoemtry service used by this engine
+        /// </summary>
+        /// <param name="geometryEngine"></param>
+        /// <returns></returns>
+        IXModelGeometryService GetUnderlyingModelGeometryService(IXbimGeometryEngine geometryEngine);
     }
 }
