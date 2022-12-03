@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Xbim.Geometry.Abstractions
+﻿namespace Xbim.Geometry.Abstractions
 {
-    internal class XVertexFactory
+    public interface IXVertexFactory
     {
+        IXVertex Build(double x, double y, double z = 0);
+        bool IsEqual(IXVertex other, double tolerance);
     }
 }
