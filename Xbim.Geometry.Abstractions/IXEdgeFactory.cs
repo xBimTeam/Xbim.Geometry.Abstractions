@@ -7,10 +7,10 @@ namespace Xbim.Geometry.Abstractions
 {
     public interface IXEdgeFactory : IXModelScoped
     {
-        IXEdge BuildEdge(IXPoint start, IXPoint end);
+        IXEdge Build(IXPoint start, IXPoint end);
 
         IXEdge Build(IIfcCurve curve);
-        IXEdge BuildEdge(IXCurve curve);
+        IXEdge Build(IXCurve curve);
 
     }
 }
