@@ -33,6 +33,13 @@ namespace Xbim.Geometry.Abstractions
         /// Model units that make up one meter
         /// </summary>
         double OneMeter { get; }
+        /// <summary>
+        /// Model units that make up one foot
+        /// </summary>
+        double OneFoot { get; }
+        /// <summary>
+        /// Model units that make up one millimeter
+        /// </summary>
         double OneMillimeter { get; }
         /// <summary>
         /// The smallest distance between faces and edges before they are determined to be coincidental, 
