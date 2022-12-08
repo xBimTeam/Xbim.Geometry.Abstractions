@@ -8,7 +8,7 @@ namespace Xbim.Geometry.Abstractions
 {
     public interface IXShapeService : IXModelScoped
     {
-        IXbimGeometryEngine V5Engine { get; }
+       
 
         /// <summary>
         /// Returns the 3D symold of the specified type, note these symbol shapes are readonly
