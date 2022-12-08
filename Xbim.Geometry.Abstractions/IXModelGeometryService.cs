@@ -8,20 +8,22 @@ namespace Xbim.Geometry.Abstractions
     {
         IXLoggingService LoggingService { get; }
         IXVertexFactory VertexFactory { get; }
-       
+
         IXGeometryFactory GeometryFactory { get; }
         IXCurveFactory CurveFactory { get; }
         IXSurfaceFactory SurfaceFactory { get; }
 
         IXEdgeFactory EdgeFactory { get; }
         IXWireFactory WireFactory { get; }
-       
+
         IXFaceFactory FaceFactory { get; }
         IXShellFactory ShellFactory { get; }
         IXSolidFactory SolidFactory { get; }
         IXCompoundFactory CompoundFactory { get; }
         IXBooleanFactory BooleanFactory { get; }
-
+        IXShapeFactory ShapeFactory { get; }
+        IXProfileFactory ProfileFactory { get; }
+        
         IXbimGeometryEngine GeometryEngineV6 { get; }
         double Timeout { get; set; }
         /// <summary>
