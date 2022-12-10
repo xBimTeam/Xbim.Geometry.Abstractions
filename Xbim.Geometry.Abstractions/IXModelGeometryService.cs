@@ -24,7 +24,7 @@ namespace Xbim.Geometry.Abstractions
         IXShapeFactory ShapeFactory { get; }
         IXProfileFactory ProfileFactory { get; }
         IXMaterialFactory MaterialFactory { get; }
-
+        IXProjectionFactory ProjectionFactory { get; }
         double Timeout { get; set; }
         /// <summary>
         /// The distance between two points less than or equal to which they are determined to be coincidental
