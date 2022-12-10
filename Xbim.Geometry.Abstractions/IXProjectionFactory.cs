@@ -6,7 +6,7 @@ namespace Xbim.Geometry.Abstractions
 {
     
     
-    public interface  IXProjectionService : IXModelScoped
+    public interface  IXProjectionFactory : IXModelScoped
     {
 
         /// <summary>
