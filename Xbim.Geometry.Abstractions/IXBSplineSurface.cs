@@ -7,6 +7,8 @@ namespace Xbim.Geometry.Abstractions
     public interface IXBSplineSurface : IXBoundedSurface
     {
         int MaxDegree { get; }
-        IXPoint[] Knots { get; }
+        //double[] UKnots { get; }
+        //double[] VKnots { get; }
     }
+
 }
