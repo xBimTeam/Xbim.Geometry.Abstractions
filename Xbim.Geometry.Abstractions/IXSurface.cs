@@ -3,6 +3,7 @@
     public interface IXSurface
     {
         XSurfaceType SurfaceType { get; }
-        bool IsPeriodic { get; }
+        bool IsUPeriodic { get; }
+        bool IsVPeriodic { get; }
     }
 }
