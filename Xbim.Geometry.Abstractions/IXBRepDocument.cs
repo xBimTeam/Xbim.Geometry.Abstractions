@@ -21,13 +21,7 @@ namespace Xbim.Geometry.Abstractions
         /// <returns></returns>
         IXStorageItem CreateAssembly(string name, IXShape assemblyShape);
         bool RemoveAssembly(IXStorageItem item);
-        /// <summary>
-        /// Adds or retrieves if it already exists a material from the document
-        /// </summary>
-        /// <param name="visMaterial">definition of the material</param>
-        /// <returns></returns>
-        IXVisualMaterial AddVisualMaterial(IXVisualMaterial visMaterial);
-        void SetMaterial(IXShape shape, IXVisualMaterial visMaterial);
+        
         /// <summary>
         /// Adds a shape to the document root, this shape may be shared or referred to by other shapes in the document
         /// </summary>
@@ -42,10 +36,7 @@ namespace Xbim.Geometry.Abstractions
         /// <returns>Shape or Null if the shape does not exists</returns>
         IXShape GetShape(int id);
 
-        IXVisualMaterial GetMaterial(IXStorageItem item);
-        IXVisualMaterial GetMaterial(IXShape shape);
-        IEnumerable<IXVisualMaterial> GetVisualMaterials();
-        IEnumerable<IXStorageItem> GetMaterials();
+
 
         bool ExportGltf(string path, bool asBinary = true);
         bool ExportSTEP(string path);
