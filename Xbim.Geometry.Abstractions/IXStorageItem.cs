@@ -28,7 +28,7 @@ namespace Xbim.Geometry.Abstractions
         IXStorageItem AddComponent(string name, int shapeId, IXShape shape);
         IXStorageItem AddSubShape(string name, IXShape shape, bool isExistingPart);
         int NbComponents { get; }
-        IXVisualMaterial VisualMaterial { get; set; }
+        //IXVisualMaterial VisualMaterial { get; set; }
         IXShape Shape { get; set; }
         IEnumerable<IXStorageItem> Components { get; }
         IEnumerable<IXStorageItem> SubShapeStorageItems { get; }
