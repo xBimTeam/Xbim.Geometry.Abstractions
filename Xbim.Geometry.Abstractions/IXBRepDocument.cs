@@ -53,8 +53,8 @@ namespace Xbim.Geometry.Abstractions
         /// <param name="defaultColour"></param>
         /// <param name="meshGranularity"></param>
         /// <returns></returns>
-        bool ExportWexbim(string path, IXColourRGB defaultColour, MeshGranularity meshGranularity = MeshGranularity.Normal);
-        byte[] ExportWexbim(IXColourRGB defaultColour, MeshGranularity meshGranularity = MeshGranularity.Normal);
+        //bool ExportWexbim(string path, IXColourRGB defaultColour, MeshGranularity meshGranularity = MeshGranularity.Normal);
+        //byte[] ExportWexbim(IXColourRGB defaultColour, MeshGranularity meshGranularity = MeshGranularity.Normal);
 
         double? ConversionFactorForOneMeter { get; set; }
         double? PrecisionFactor { get; set; }
