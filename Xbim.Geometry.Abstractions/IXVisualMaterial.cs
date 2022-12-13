@@ -4,7 +4,7 @@
     {
         
         string Name { get; }
-        IXBRepDocumentItem Label { get;  }
+        
         IXColourRGB AmbientColor { get; set; }
         IXColourRGB DiffuseColor { get; set; }
         IXColourRGB SpecularColor { get; set; }
@@ -18,6 +18,6 @@
         /// </summary>
         float Transparency { get; set; }
         bool IsDefined { get;}
-        bool IsStored { get; }
+       
     }
 }
