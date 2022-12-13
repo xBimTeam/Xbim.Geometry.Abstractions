@@ -23,6 +23,8 @@ namespace Xbim.Geometry.Abstractions
         void SetMaterial(IXShape shape, IXVisualMaterial visMaterial);
         IXVisualMaterial GetMaterial(IXBRepDocumentItem item);
         IXVisualMaterial GetMaterial(IXShape shape);
+        IEnumerable<IXVisualMaterial> GetVisualMaterials();
+        IEnumerable<IXBRepDocumentItem> GetMaterials();
         /// <summary>
         /// Adds a shape to the document root, this shape may be shared or referred to by other shapes in the document
         /// </summary>
