@@ -16,7 +16,7 @@ namespace Xbim.Geometry.Abstractions
         bool IsAssembly { get; }
         bool IsComponent { get; }
         bool IsCompound { get; }
-        
+
         bool IsExternalRef { get; }
         bool IsSimpleShape { get; }
         bool IsReference { get; }
@@ -42,7 +42,7 @@ namespace Xbim.Geometry.Abstractions
         double? Area { get; set; }
         double? HeightMin { get; set; }
         double? HeightMax { get; set; }
-       
+
         double? ThicknessMax { get; set; }
         void SetPlacement(IIfcObjectPlacement objectPlacement);
         /// <summary>
@@ -72,8 +72,11 @@ namespace Xbim.Geometry.Abstractions
         int GetIntAttribute(string name);
         void SetDoubleAttribute(string name, double? value);
         double? GetDoubleAttribute(string name);
-        
+        /// <summary>
+        /// If this storage item is a material, returns all shapes assigned to this material
+        /// </summary>
+        IEnumerable<IXBRepDocumentItem> ShapesAssignedToMaterial { get; }
         void AddReference(IXBRepDocumentItem referred, XbimMatrix3D? transform);
-
+        IXVisualMaterial VisualMaterial { get; set; }
     }
 }
