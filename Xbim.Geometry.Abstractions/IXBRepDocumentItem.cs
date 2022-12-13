@@ -72,10 +72,7 @@ namespace Xbim.Geometry.Abstractions
         int GetIntAttribute(string name);
         void SetDoubleAttribute(string name, double? value);
         double? GetDoubleAttribute(string name);
-        /// <summary>
-        /// If this storage item is a material, returns all shapes assigned to this material
-        /// </summary>
-        IEnumerable<IXBRepDocumentItem> ShapesAssignedToMaterial { get; }
+        
         void AddReference(IXBRepDocumentItem referred, XbimMatrix3D? transform);
 
     }
