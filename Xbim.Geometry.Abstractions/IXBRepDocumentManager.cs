@@ -1,4 +1,6 @@
-﻿namespace Xbim.Geometry.Abstractions
+﻿using Xbim.IO.Step21;
+
+namespace Xbim.Geometry.Abstractions
 {
     public interface IXBRepDocumentManager
     {
@@ -60,7 +62,7 @@
         /// </summary>
         /// <param name="document"></param>
         void Close(IXBRepDocument document);
-       
+       StepDateTimeHelper interface updated
         /// <summary>
         /// returns a binary byte array representation of the shape and its location, 
         /// </summary>
