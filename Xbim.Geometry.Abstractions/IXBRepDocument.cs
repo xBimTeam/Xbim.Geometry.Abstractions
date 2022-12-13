@@ -19,7 +19,10 @@ namespace Xbim.Geometry.Abstractions
         /// <returns></returns>
         IXBRepDocumentItem CreateAssembly(string name, IXShape assemblyShape);
         bool RemoveAssembly(IXBRepDocumentItem item);
-        
+        IXVisualMaterial AddVisualMaterial(IXVisualMaterial visMaterial);
+        void SetMaterial(IXShape shape, IXVisualMaterial visMaterial);
+        IXVisualMaterial GetMaterial(IXBRepDocumentItem item);
+        IXVisualMaterial GetMaterial(IXShape shape);
         /// <summary>
         /// Adds a shape to the document root, this shape may be shared or referred to by other shapes in the document
         /// </summary>
@@ -39,8 +42,8 @@ namespace Xbim.Geometry.Abstractions
         IXBRepDocumentItem RootItem { get; }
 
         void UpdateAssemblies();
-       
-       
+
+
         double? ConversionFactorForOneMeter { get; set; }
         double? PrecisionFactor { get; set; }
     }
