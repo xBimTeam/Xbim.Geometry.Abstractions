@@ -4,7 +4,7 @@
     {
         
         string Name { get; }
-        IXStorageItem Label { get;  }
+        IXBRepDocumentItem Label { get;  }
         IXColourRGB AmbientColor { get; set; }
         IXColourRGB DiffuseColor { get; set; }
         IXColourRGB SpecularColor { get; set; }

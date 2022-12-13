@@ -8,7 +8,7 @@
         int EntityLabel { get; }
         IXShape Shape { get; }
         IXVisualMaterial Material { get; }
-        IXStorageItem StorageHandle { get; set; }
+        IXBRepDocumentItem StorageHandle { get; set; }
         bool IsStored { get; }
     }
 }

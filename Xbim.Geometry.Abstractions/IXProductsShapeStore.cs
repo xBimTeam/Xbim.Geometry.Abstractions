@@ -9,7 +9,7 @@ namespace Xbim.Geometry.Abstractions
     public interface IXProductsShapeStore : IXModelScoped, IDisposable
     {
     
-        IXStorageItem FeaturesNode { get; }
+        IXBRepDocumentItem FeaturesNode { get; }
         bool StoreFeatures { get; set; }
 
         IXBRepDocument Document { get; }
@@ -24,18 +24,18 @@ namespace Xbim.Geometry.Abstractions
         void UpdateAssemblies();
         IXProductDefinitionShape AddProductDefinition(IIfcProduct product);
         ISet<IIfcGeometricRepresentationContext> RequiredGeometricRepresentationContexts { get; set; }
-        IDictionary<int, IXStorageItem> ShapeRepresentationsMap { get; }
+        IDictionary<int, IXBRepDocumentItem> ShapeRepresentationsMap { get; }
         IDictionary<int, IXGeometricRepresentation> GeometricRepresentationItemsMap { get; }
         IDictionary<int, IXVisualMaterial> MaterialsMap { get; }
         IXBRepDocument Features { get; }
 
-        void AssignMaterial(IXStorageItem subShape, IXVisualMaterial material);
+        void AssignMaterial(IXBRepDocumentItem subShape, IXVisualMaterial material);
         IXVisualMaterial GetVisualMaterial(IIfcGeometricRepresentationItem repItem);
         IXVisualMaterial GetVisualMaterial(IIfcProduct product);
         IXVisualMaterial GetVisualMaterial(IIfcMaterial material);
         IIfcMaterialSelect GetPhysicalMaterial(IIfcProduct product);
         IXVisualMaterial[] GetFirstAndLastVisualMaterial(IIfcMaterialSelect material);
-        void Remove(IXStorageItem item);
+        void Remove(IXBRepDocumentItem item);
         IList<IXMaterialQuantity> MaterialTakeOff();
         IEnumerable<IXProductDefinitionShape> ProductDefinitionShapes { get; }
         XbimMultiValueDictionary<int, int> OpeningsLookup { get; }
@@ -48,8 +48,8 @@ namespace Xbim.Geometry.Abstractions
         /// </summary>
         /// <returns></returns>
         IXProductsShapeStore EmptyCopy();
-        bool TryGetRepresentation(int entityLabel, out IXStorageItem repNode);
-        bool TryAddRepresentation(int entityLabel, IXStorageItem shapeRepresentationNode);
+        bool TryGetRepresentation(int entityLabel, out IXBRepDocumentItem repNode);
+        bool TryAddRepresentation(int entityLabel, IXBRepDocumentItem shapeRepresentationNode);
         bool TryGetGeometryItem(int entityLabel, out IXGeometricRepresentation geomItemNode);
         bool TryAddGeometryItem(int entityLabel, IXGeometricRepresentation geomItemNode);
         /// <summary>

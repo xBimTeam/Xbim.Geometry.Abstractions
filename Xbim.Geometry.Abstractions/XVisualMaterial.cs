@@ -25,7 +25,7 @@ namespace Xbim.Geometry.Abstractions
 
         public string Name => _name;
 
-        public IXStorageItem Label => throw new NotImplementedException();
+        public IXBRepDocumentItem Label => throw new NotImplementedException();
 
         public IXColourRGB AmbientColor { get => _ambientColor; set => _ambientColor = value; }
         public IXColourRGB DiffuseColor { get => _diffuseColor; set => _diffuseColor = value; }

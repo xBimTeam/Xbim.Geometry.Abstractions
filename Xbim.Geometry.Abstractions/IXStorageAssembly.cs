@@ -12,8 +12,8 @@ namespace Xbim.Geometry.Abstractions
         /// <param name="name">Name of the top level</param>
         /// <param name="defaultShape">Defalut is a compouns shape when null</param>
         /// <returns></returns>
-        IXStorageItem NewTopLevelShape(string name, IXShape defaultShape = null);
-        IXStorageItem AddShape(string name, IXShape shape, bool expand = false);
+        IXBRepDocumentItem NewTopLevelShape(string name, IXShape defaultShape = null);
+        IXBRepDocumentItem AddShape(string name, IXShape shape, bool expand = false);
         void UpdateAssemblies();
         
     };

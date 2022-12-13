@@ -10,15 +10,15 @@ namespace Xbim.Geometry.Abstractions
         /// </summary>
         /// <param name="name">name of assembly</param>
         /// <returns></returns>
-        IXStorageItem CreateAssembly(string name);
+        IXBRepDocumentItem CreateAssembly(string name);
         /// <summary>
         /// Creates a top level assembly and initialises its shape to assemblyShape
         /// </summary>
         /// <param name="name">name of assembly</param>
         /// <param name="assemblyShape">initial shape state</param>
         /// <returns></returns>
-        IXStorageItem CreateAssembly(string name, IXShape assemblyShape);
-        bool RemoveAssembly(IXStorageItem item);
+        IXBRepDocumentItem CreateAssembly(string name, IXShape assemblyShape);
+        bool RemoveAssembly(IXBRepDocumentItem item);
         
         /// <summary>
         /// Adds a shape to the document root, this shape may be shared or referred to by other shapes in the document
@@ -26,7 +26,7 @@ namespace Xbim.Geometry.Abstractions
         /// <param name="id">Typically the entity label of the Ifc representation</param>
         /// <param name="shape"></param>
         /// <returns></returns>
-        IXStorageItem AddShape(int id, IXShape shape);
+        IXBRepDocumentItem AddShape(int id, IXShape shape);
         /// <summary>
         /// Gets a shape by its id stored in the root of the document
         /// </summary>
@@ -35,8 +35,8 @@ namespace Xbim.Geometry.Abstractions
         IXShape GetShape(int id);
 
         //IEnumerable<IXStorageItem> FreeShapes { get; }
-        IEnumerable<IXStorageItem> Shapes { get; }
-        IXStorageItem RootItem { get; }
+        IEnumerable<IXBRepDocumentItem> Shapes { get; }
+        IXBRepDocumentItem RootItem { get; }
 
         void UpdateAssemblies();
        

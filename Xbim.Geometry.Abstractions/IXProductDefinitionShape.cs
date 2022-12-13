@@ -15,7 +15,7 @@ namespace Xbim.Geometry.Abstractions
         IEnumerable<IXShapeRepresentation> ShapeRepresentations { get; }
         int NbMaterialLayers { get; }
 
-        void AddShapeRepresentation(string name, int id,  IXStorageItem representationShape, IIfcObjectPlacement objectPlacement, ILogger logger);
+        void AddShapeRepresentation(string name, int id,  IXBRepDocumentItem representationShape, IIfcObjectPlacement objectPlacement, ILogger logger);
         double? Volume { get; set; }
         double? Area { get; set; }
         double? ThicknessMax { get; set; }

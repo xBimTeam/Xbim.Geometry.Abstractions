@@ -5,7 +5,7 @@ using Xbim.Ifc4.Interfaces;
 
 namespace Xbim.Geometry.Abstractions
 {
-    public interface IXStorageItem
+    public interface IXBRepDocumentItem
     {
         string Key { get; }
         string Name { get; }
@@ -21,22 +21,22 @@ namespace Xbim.Geometry.Abstractions
         bool IsSimpleShape { get; }
         bool IsReference { get; }
         bool IsNull { get; }
-        IXStorageItem AddShape(string name, IXShape shape, bool expand = false);
-        IXStorageItem AddComponent(string name, int shapeId, IXShape shape, IIfcObjectPlacement objPlacement, ILogger logger);
-        IXStorageItem AddComponent(string name, IXStorageItem component, IIfcObjectPlacement objPlacement, ILogger logger);
-        IXStorageItem AddComponent(string name, IXStorageItem component, XbimMatrix3D transform);
-        IXStorageItem AddComponent(string name, int shapeId, IXShape shape);
-        IXStorageItem AddSubShape(string name, IXShape shape, bool isExistingPart);
+        IXBRepDocumentItem AddShape(string name, IXShape shape, bool expand = false);
+        IXBRepDocumentItem AddComponent(string name, int shapeId, IXShape shape, IIfcObjectPlacement objPlacement, ILogger logger);
+        IXBRepDocumentItem AddComponent(string name, IXBRepDocumentItem component, IIfcObjectPlacement objPlacement, ILogger logger);
+        IXBRepDocumentItem AddComponent(string name, IXBRepDocumentItem component, XbimMatrix3D transform);
+        IXBRepDocumentItem AddComponent(string name, int shapeId, IXShape shape);
+        IXBRepDocumentItem AddSubShape(string name, IXShape shape, bool isExistingPart);
         int NbComponents { get; }
         //IXVisualMaterial VisualMaterial { get; set; }
         IXShape Shape { get; set; }
-        IEnumerable<IXStorageItem> Components { get; }
-        IEnumerable<IXStorageItem> SubShapeStorageItems { get; }
+        IEnumerable<IXBRepDocumentItem> Components { get; }
+        IEnumerable<IXBRepDocumentItem> SubShapeStorageItems { get; }
         IEnumerable<IXShape> SubShapes { get; }
-        IXStorageItem ReferredShape { get; }
-        IXStorageItem AddAssembly(string subAssemblyName);
-        IXStorageItem AddAssembly(string subAssemblyName, IIfcObjectPlacement placement);
-        IXStorageItem AddAssembly(string subAssemblyName, XbimMatrix3D transform);
+        IXBRepDocumentItem ReferredShape { get; }
+        IXBRepDocumentItem AddAssembly(string subAssemblyName);
+        IXBRepDocumentItem AddAssembly(string subAssemblyName, IIfcObjectPlacement placement);
+        IXBRepDocumentItem AddAssembly(string subAssemblyName, XbimMatrix3D transform);
         bool IsStored { get; }
         double? Volume { get; set; }
         double? Area { get; set; }
@@ -75,8 +75,8 @@ namespace Xbim.Geometry.Abstractions
         /// <summary>
         /// If this storage item is a material, returns all shapes assigned to this material
         /// </summary>
-        IEnumerable<IXStorageItem> ShapesAssignedToMaterial { get; }
-        void AddReference(IXStorageItem referred, XbimMatrix3D? transform);
+        IEnumerable<IXBRepDocumentItem> ShapesAssignedToMaterial { get; }
+        void AddReference(IXBRepDocumentItem referred, XbimMatrix3D? transform);
 
     }
 }
