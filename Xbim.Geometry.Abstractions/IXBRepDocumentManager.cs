@@ -62,7 +62,7 @@ namespace Xbim.Geometry.Abstractions
         /// </summary>
         /// <param name="document"></param>
         void Close(IXBRepDocument document);
-       StepDateTimeHelper interface updated
+      
         /// <summary>
         /// returns a binary byte array representation of the shape and its location, 
         /// </summary>
