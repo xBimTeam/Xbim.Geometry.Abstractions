@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Text;
 
 namespace Xbim.Geometry.Abstractions
 {
@@ -36,26 +34,13 @@ namespace Xbim.Geometry.Abstractions
         /// <returns>Shape or Null if the shape does not exists</returns>
         IXShape GetShape(int id);
 
-
-
-        bool ExportGltf(string path, bool asBinary = true);
-        bool ExportSTEP(string path);
-
         //IEnumerable<IXStorageItem> FreeShapes { get; }
         IEnumerable<IXStorageItem> Shapes { get; }
         IXStorageItem RootItem { get; }
 
         void UpdateAssemblies();
-        /// <summary>
-        /// Exports the document to a webim format, level of triangulation detail is set by mesh factors, see SetGranularity method of IXMeshFactors
-        /// </summary>
-        /// <param name="path"></param>
-        /// <param name="defaultColour"></param>
-        /// <param name="meshGranularity"></param>
-        /// <returns></returns>
-        //bool ExportWexbim(string path, IXColourRGB defaultColour, MeshGranularity meshGranularity = MeshGranularity.Normal);
-        //byte[] ExportWexbim(IXColourRGB defaultColour, MeshGranularity meshGranularity = MeshGranularity.Normal);
-
+       
+       
         double? ConversionFactorForOneMeter { get; set; }
         double? PrecisionFactor { get; set; }
     }
