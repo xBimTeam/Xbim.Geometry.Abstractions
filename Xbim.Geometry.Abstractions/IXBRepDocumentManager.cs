@@ -36,12 +36,7 @@
         IXBRepDocument NewDocument();
 
         IXBRepDocument NewDocument(double oneMeter, double precision);
-        /// <summary>
-        /// Returns the created document, null if there is an error creating the document, see logs for error message
-        /// </summary>
-        /// <returns></returns>
-        ///IXMaterialisedShapeDocument NewDocument(int ifcProductId, short ifcType, int ifcShapeId, IXShape shape, IXVisualMaterial material, double oneMeter);
-
+        
         /// <summary>
         /// Save the document
         /// </summary>
@@ -65,7 +60,7 @@
         /// </summary>
         /// <param name="document"></param>
         void Close(IXBRepDocument document);
-        IXBRepDocument OpenSTEP(string filePath);
+       
         /// <summary>
         /// returns a binary byte array representation of the shape and its location, 
         /// </summary>
