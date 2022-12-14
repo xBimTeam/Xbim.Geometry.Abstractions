@@ -6,6 +6,7 @@ namespace Xbim.Geometry.Abstractions
 {
     public interface IXModelGeometryService
     {
+
         IXLoggingService LoggingService { get; }
         IXVertexFactory VertexFactory { get; }
 
