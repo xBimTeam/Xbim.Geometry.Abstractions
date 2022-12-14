@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Security.Principal;
 using Xbim.Common;
 using Xbim.Ifc4.Interfaces;
 
@@ -91,5 +93,26 @@ namespace Xbim.Geometry.Abstractions
         /// <param name="mappedItem"></param>
         /// <returns></returns>
         IXLocation CreateMappingTransform(IIfcMappedItem mappedItem);
+
+
+        void LogError(string format, params object[] args);
+        void LogError(IPersistEntity ifcEntity, string format, params object[] args);
+        void LogError(IPersistEntity ifcEntity, Exception exception, string format, params object[] args);
+        void LogError(Exception exception, string format, params object[] args);
+
+        void LogWarning(string format, params object[] args);
+        void LogWarning(IPersistEntity ifcEntity, string format, params object[] args);
+        void LogWarning(IPersistEntity ifcEntity, Exception exception, string format, params object[] args);
+        void LogWarning(Exception exception, string format, params object[] args);
+
+        void LogInformation(string format, params object[] args);
+        void LogInformation(IPersistEntity ifcEntity, string format, params object[] args);
+        void LogInformation(IPersistEntity ifcEntity, Exception exception, string format, params object[] args);
+        void LogInformation(Exception exception, string format, params object[] args);
+
+        void LogDebug(string format, params object[] args);
+        void LogDebug(IPersistEntity ifcEntity, string format, params object[] args);
+        void LogDebug(IPersistEntity ifcEntity, Exception exception, string format, params object[] args);
+        void LogDebug(Exception exception, string format, params object[] args);
     }
 }
