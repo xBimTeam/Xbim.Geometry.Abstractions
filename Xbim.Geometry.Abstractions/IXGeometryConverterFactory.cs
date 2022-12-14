@@ -15,7 +15,7 @@ namespace Xbim.Geometry.Abstractions
         /// Version 6 Geometry Engine for comparison with V5, this is for backward compatibility, test and develop purposes only. 
         /// It will be deprecated in facour of CreateModelGeometryService
         /// </summary>
-        IXbimGeometryEngine CreateGeometryEngineV6(IModel model, ILoggerFactory loggerFactory);
+        IXGeometryEngineV6 CreateGeometryEngineV6(IModel model, ILoggerFactory loggerFactory);
         /// <summary>
         /// Creates a Root Service to access Geometry Factories that are scoped to the current Model
         /// </summary>
