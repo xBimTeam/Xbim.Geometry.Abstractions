@@ -14,6 +14,6 @@ namespace Xbim.Geometry.Abstractions
         IXPoint BuildPoint2d(double x, double y);
         IXDirection BuildDirection3d(double x, double y, double z);
         IXDirection BuildDirection2d(double x, double y);
-        IXLocation BuildLocation(double tx, double ty, double tz, double sc, double qw, double qx, double qy, double qz);
+        IXLocation BuildLocation(IIfcObjectPlacement placement);
     }
 }
