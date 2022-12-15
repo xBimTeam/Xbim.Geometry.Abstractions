@@ -35,5 +35,7 @@ namespace Xbim.Geometry.Abstractions
 		byte[] CreateWexBimMesh(IEnumerable<IXFace> faces, IXMeshFactors meshFactors);
 		byte[] CreateWexBimMesh(IXShape shape, IXMeshFactors meshFactors, ref bool hasCurves);
 		byte[] CreateWexBimMesh(IEnumerable<IXFace> faces, IXMeshFactors meshFactors, ref bool hasCurves);
-	}
+		IXShape BuildMappedShape(IIfcCartesianTransformationOperator transform, IIfcAxis2Placement origin, IXShape shape, out IXLocation location);
+
+    }
 }
