@@ -1,4 +1,5 @@
-﻿using Xbim.Ifc4.Interfaces;
+﻿using QUT.Gppg;
+using Xbim.Ifc4.Interfaces;
 
 namespace Xbim.Geometry.Abstractions
 {
@@ -15,5 +16,7 @@ namespace Xbim.Geometry.Abstractions
         IXDirection BuildDirection3d(double x, double y, double z);
         IXDirection BuildDirection2d(double x, double y);
         IXLocation BuildLocation(IIfcObjectPlacement placement);
+        IXLocation BuildLocation(IIfcAxis2Placement placement);
+        IXMatrix BuildTransform(IIfcCartesianTransformationOperator tranformOp);
     }
 }
