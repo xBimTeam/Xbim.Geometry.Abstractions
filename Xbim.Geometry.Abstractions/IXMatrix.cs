@@ -8,7 +8,7 @@ namespace Xbim.Geometry.Abstractions
     public interface IXMatrix 
     {
 
-        bool IsAffine { get; }
+
         bool IsIdentity { get; }
       
         double M11 { get; set; }
