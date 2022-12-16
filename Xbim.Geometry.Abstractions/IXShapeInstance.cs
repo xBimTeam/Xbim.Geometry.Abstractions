@@ -11,5 +11,6 @@ namespace Xbim.Geometry.Abstractions
     {
         IXShapeComponent Component { get; set; }
         IXLocation Location { get; set; }
+        IXMatrix Transformation { get; set; }
     }
 }
