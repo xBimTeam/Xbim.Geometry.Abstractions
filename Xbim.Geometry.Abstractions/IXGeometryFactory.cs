@@ -18,5 +18,6 @@ namespace Xbim.Geometry.Abstractions
         IXLocation BuildLocation(IIfcObjectPlacement placement);
         IXLocation BuildLocation(IIfcAxis2Placement placement);
         IXMatrix BuildTransform(IIfcCartesianTransformationOperator tranformOp);
+        void BuildMapTransform(IIfcCartesianTransformationOperator transform, IIfcAxis2Placement origin, out IXLocation location, out IXMatrix matrix);
     }
 }
