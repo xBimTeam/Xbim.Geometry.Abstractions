@@ -27,6 +27,6 @@ namespace Xbim.Geometry.Abstractions
         double OffsetX { get; }
         double OffsetY { get; }
         double OffsetZ { get; }
-        
+        double[] Values { get; }
     }
 }
