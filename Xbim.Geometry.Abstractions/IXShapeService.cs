@@ -8,15 +8,7 @@ namespace Xbim.Geometry.Abstractions
 {
     public interface IXShapeService 
     {
-       
 
-
-        /// <summary>
-        /// Returns the 3D symold of the specified type, note these symbol shapes are readonly
-        /// </summary>
-        /// <param name="symbolType"></param>
-        /// <returns></returns>
-        IXShape GetSymbol(GeometricSymbols symbolType);
         /// <summary>
         /// Unifies faces and edges of the shape which lie on the same geometry
         /// </summary>
