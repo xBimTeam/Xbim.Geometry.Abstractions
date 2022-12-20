@@ -11,7 +11,7 @@ namespace Xbim.Geometry.Abstractions.WexBim
     public interface IWexBimContent
     {
         IWexBimHeader Header { get; }
-        IEnumerable<IWexBimProduct> Products { get; }
+        IDictionary<int, IWexBimProduct> Products { get; }
         IList<IWexBimRegion> Regions { get; }
         IList<IWexBimStyle> Styles { get; }
 
