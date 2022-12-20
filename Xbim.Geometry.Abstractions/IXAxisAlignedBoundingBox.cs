@@ -11,6 +11,6 @@
         string Json { get; }
         IXAxisAlignedBoundingBox Union(IXAxisAlignedBoundingBox other);
         bool IsVoid { get; }
-        IXAxisAlignedBoundingBox Scaled(double scale);
+        //IXAxisAlignedBoundingBox Scaled(double scale);
     }
 }
