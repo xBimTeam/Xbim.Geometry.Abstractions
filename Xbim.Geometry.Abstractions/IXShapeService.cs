@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
 using Xbim.Common.Geometry;
 using Xbim.Ifc4.Interfaces;
 
