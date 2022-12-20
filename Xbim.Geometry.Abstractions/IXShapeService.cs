@@ -4,7 +4,7 @@ using Xbim.Ifc4.Interfaces;
 
 namespace Xbim.Geometry.Abstractions
 {
-    public interface IXShapeService 
+    public interface IXShapeService
     {
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace Xbim.Geometry.Abstractions
         /// <param name="placement"></param>
         /// <returns></returns>
         IXShape SetPlacement(IXShape shape, IIfcObjectPlacement placement);
-       
+
 
         /// <summary>
         /// Applies the inverse of the object placement if invertPacement is true
@@ -55,7 +55,7 @@ namespace Xbim.Geometry.Abstractions
 
         bool IsFacingAwayFrom(IXFace face, IXDirection direction);
 
-  
+
         /// <summary>
         /// Creates a single compound shape from the shapes params
         /// </summary>
@@ -72,7 +72,7 @@ namespace Xbim.Geometry.Abstractions
         /// <param name="meshFactors">Factors to control the mesh triangulation granularity</param>
         /// <param name="hasCurves">true if the shape has any curved edges or faces, use to determine if finer or courser meshing will return a different result</param>
         /// <returns></returns>
-        byte[] CreateWexBimMesh(IXShape shape, IXMeshFactors meshFactors, out IXAxisAlignedBoundingBox bounds,  out bool hasCurves);
-        byte[] CreateWexBimMesh(IXShape shape, IXMeshFactors meshFactors, out IXAxisAlignedBoundingBox bounds);
+        byte[] CreateWexBimMesh(IXShape shape, IXMeshFactors meshFactors, double scale, out IXAxisAlignedBoundingBox bounds, out bool hasCurves);
+        byte[] CreateWexBimMesh(IXShape shape, IXMeshFactors meshFactors, double scale, out IXAxisAlignedBoundingBox bounds);
     }
 }
