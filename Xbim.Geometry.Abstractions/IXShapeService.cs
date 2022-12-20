@@ -61,7 +61,7 @@ namespace Xbim.Geometry.Abstractions
         /// </summary>
         /// <param name="shapes"></param>
         /// <returns></returns>
-        IXShape Combine(params IXShape[] shapes);
+        IXShape Combine(IEnumerable<IXShape> shapes);
 
         /// <summary>
         /// Creates a mesh of the shape, a call to Triangulation must be made on the shape prior to this call
