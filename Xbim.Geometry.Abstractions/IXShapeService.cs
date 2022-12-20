@@ -53,8 +53,6 @@ namespace Xbim.Geometry.Abstractions
         IXShape Moved(IXShape shape, IXLocation moveTo);
         IXShape Scaled(IXShape shape, double scale);
 
-        IXAxis2Placement2d BuildAxis2Placement2d(IXPoint location, IXVector xDirection);
-
         bool IsFacingAwayFrom(IXFace face, IXDirection direction);
 
   
@@ -83,9 +81,7 @@ namespace Xbim.Geometry.Abstractions
         /// <param name="meshFactors">Factors to control the mesh triangulation granularity</param>
         /// <param name="hasCurves">true if the shape has any curved edges or faces, use to determine if finer or courser meshing will return a different result</param>
         /// <returns></returns>
-        byte[] CreateWexBimMesh(IXShape shape, IXMeshFactors meshFactors, ref bool hasCurves);
-        byte[] CreateWexBimMesh(IEnumerable<IXFace> faces, IXMeshFactors meshFactors, ref bool hasCurves);
-        byte[] CreateWexBimMesh(IXShape shape, IXMeshFactors meshFactors);
-        byte[] CreateWexBimMesh(IEnumerable<IXFace> faces, IXMeshFactors meshFactors);
+        byte[] CreateWexBimMesh(IXShape shape, IXMeshFactors meshFactors, out IXAxisAlignedBoundingBox bounds,  out bool hasCurves);
+        byte[] CreateWexBimMesh(IXShape shape, IXMeshFactors meshFactors, out IXAxisAlignedBoundingBox bounds);
     }
 }
