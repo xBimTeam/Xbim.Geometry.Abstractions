@@ -14,7 +14,7 @@ namespace Xbim.Geometry.Abstractions
 
         IEnumerable<IXShapeGeometry> Geometries { get; }
         IEnumerable<IXShapeColour> Colours { get; }
-
+        IEnumerable<IXShapeMaterial> Materials { get; }
 
         /// <summary>
         /// Saves all state and returns the fully qualified name of the store database

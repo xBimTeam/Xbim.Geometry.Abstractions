@@ -6,15 +6,15 @@ using Xbim.Ifc4.Interfaces;
 
 namespace Xbim.Geometry.Abstractions
 {
-    public interface IXShapeService : IXModelScoped
+    public interface IXShapeService 
     {
        
+
 
         /// <summary>
         /// Returns the 3D symold of the specified type, note these symbol shapes are readonly
         /// </summary>
         /// <param name="symbolType"></param>
-        
         /// <returns></returns>
         IXShape GetSymbol(GeometricSymbols symbolType);
         /// <summary>
@@ -26,19 +26,17 @@ namespace Xbim.Geometry.Abstractions
         IXShape Convert(string brepString);
         IXbimGeometryObject ConvertToV5(string brepString);
         string Convert(IXShape shape);
-        IXbimGeometryObject ConvertToV5(IXShape shape);
         string Convert(IXbimGeometryObject v5Shape);
-        //legacy call to create version 5 geometry objects
-        IXShape Build(IIfcGeometricRepresentationItem geomRep, out ShapeGeometryErrorOrWarning errorOrWarning);
-        Task<(IXShape, ShapeGeometryErrorOrWarning)> BuildAsync(IIfcGeometricRepresentationItem geomRep);
-        Task<(IXShape, ShapeGeometryErrorOrWarning)> BuildAsync(IIfcGeometricRepresentationItem geomRep, CancellationToken token);
 
-        IXShape Transform(IXShape shape, XbimMatrix3D transformMatrix);
+
+        IXShape Transform(IXShape shape, IXMatrix transformMatrix);
         void Triangulate(IXShape shape);
         IXShape Union(IXShape body, IXShape addition);
         IXShape Cut(IXShape body, IXShape subtraction);
+        IXShape Intersect(IXShape body, IXShape intersect);
         IXShape Union(IXShape body, IEnumerable<IXShape> additions);
         IXShape Cut(IXShape body, IEnumerable<IXShape> subtractions);
+        IXShape Intersect(IXShape body, IEnumerable<IXShape> intersections);
         /// <summary>
         /// Removes any placement
         /// </summary>
@@ -52,8 +50,7 @@ namespace Xbim.Geometry.Abstractions
         /// <param name="placement"></param>
         /// <returns></returns>
         IXShape SetPlacement(IXShape shape, IIfcObjectPlacement placement);
-
-      
+       
 
         /// <summary>
         /// Applies the inverse of the object placement if invertPacement is true
@@ -64,12 +61,13 @@ namespace Xbim.Geometry.Abstractions
         /// <returns></returns>
         IXShape Moved(IXShape shape, IIfcObjectPlacement placement, bool invertPlacement = false);
         IXShape Moved(IXShape shape, IXLocation moveTo);
+        IXShape Scaled(IXShape shape, double scale);
+
         IXAxis2Placement2d BuildAxis2Placement2d(IXPoint location, IXVector xDirection);
 
         bool IsFacingAwayFrom(IXFace face, IXDirection direction);
 
   
-
         /// <summary>
         /// Creates a single compound shape from the shapes params
         /// </summary>
