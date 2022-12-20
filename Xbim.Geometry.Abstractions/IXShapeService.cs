@@ -64,15 +64,6 @@ namespace Xbim.Geometry.Abstractions
         IXShape Combine(params IXShape[] shapes);
 
         /// <summary>
-        /// Method to handle faces with badly defined bounds
-        /// If there is more than one outer bound, separate faces are retruned for each bound
-        /// Wires are revered as necessary to ensure correct windings for inner and outer bounds
-        /// </summary>
-        /// <param name="face"></param>
-        /// <returns></returns>
-        IEnumerable<IXFace> FixFace(IXFace face);
-
-        /// <summary>
         /// Creates a mesh of the shape, a call to Triangulation must be made on the shape prior to this call
         /// An empty mesh will be returned if no triangulation is present
         /// use has curves to see if a finer or course mesh can be calculated

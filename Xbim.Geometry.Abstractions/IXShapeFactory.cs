@@ -31,10 +31,7 @@ namespace Xbim.Geometry.Abstractions
 		IXFace Add(IXFace toFace, IXWire[] wires);
 
 		IEnumerable<IXFace> FixFace(IXFace face);
-		byte[] CreateWexBimMesh(IXShape shape, IXMeshFactors meshFactors);
-		byte[] CreateWexBimMesh(IEnumerable<IXFace> faces, IXMeshFactors meshFactors);
-		byte[] CreateWexBimMesh(IXShape shape, IXMeshFactors meshFactors, ref bool hasCurves);
-		byte[] CreateWexBimMesh(IEnumerable<IXFace> faces, IXMeshFactors meshFactors, ref bool hasCurves);
+		
 		
 
     }
