@@ -11,7 +11,8 @@ namespace Xbim.Geometry.Abstractions
     
         IXBRepDocumentItem FeaturesNode { get; }
         bool StoreFeatures { get; set; }
-
+        void Initialise(IModel model);
+        IXGeometryEngineV6 GeometryEngine { get; }    
         IXBRepDocument Document { get; }
         IXProductShape AddProduct(IIfcProduct product);
         int AddProducts<TProduct>(Func<TProduct, bool> whereRule) where TProduct:IIfcProduct;
