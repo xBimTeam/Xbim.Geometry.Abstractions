@@ -67,7 +67,7 @@ namespace Xbim.Geometry.Abstractions
         /// <param name="child"></param>
         /// <param name="location"></param>
         /// <returns></returns>
-        IXShapeInstance AddReference(IXShapeAssembly parent, IXShapeComponent child, IXLocation location = null, IXMatrix transform = null);
+        IXShapeInstance AddReference(IXShapeAssembly parent, IXShapeComponent child, IXLocation location = null, IXMatrix transform = null, int materialIndex = -1, int colourIndex = -1);
 
         /// <summary>
         /// Returns a list of shapes with their locations for the specified assembly, if assembly is null all located shapes are returned in the store
