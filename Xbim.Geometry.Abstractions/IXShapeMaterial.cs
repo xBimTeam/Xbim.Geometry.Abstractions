@@ -2,7 +2,7 @@
 
 namespace Xbim.Geometry.Abstractions
 {
-    public interface IXShapeMaterial : IXShapeItem
+    public interface IXShapeMaterial : IXShapeMaterialItem
     {
         /// <summary>
         /// Optional dictionary of Colours, the int key is the id of the IfcGeometricRepresentationContext that the colour is to be used in
