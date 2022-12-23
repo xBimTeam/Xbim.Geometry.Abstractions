@@ -6,7 +6,7 @@ namespace Xbim.Geometry.Abstractions
     public interface IXGeometryFactory : IXModelScoped
     {
         IXAxis2Placement2d BuildAxis2Placement2d(IXPoint location, IXVector XaxisDirection);
-        IXAxis2Placement3d BuildAxis2Placement3d(IXPoint location, IXVector XaxisDirection, , IXVector ZaxisDirection);
+        IXAxis2Placement3d BuildAxis2Placement3d(IXPoint location, IXVector XaxisDirection, IXVector ZaxisDirection);
         bool IsFacingAwayFrom(IXFace face, IXDirection direction);
         IXPlane BuildPlane(IIfcPlane plane);
         double Distance(IXPoint a, IXPoint b);
