@@ -2,12 +2,14 @@
 {
     public enum NodeType : byte
     {
-        IfcProduct = 0,
-        IfcProductRepresentation = 1,
-        IfcShapeRepresentation = 2,
-        BRepShape=3,
-        IfcFeatureElement = 4, 
-        IfcColour = 5,
-        BRepShapeWithFeatures = 6
+        Product = 0,
+        ProductRepresentation = 1,
+        ShapeRepresentation = 2,
+        BRepShape = 3,
+        FeatureElement = 4,
+        Colour = 5,
+        BRepShapeWithFeatures = 6,
+        LayeredMaterial = 7,
+        Material = 8
     }
 }
