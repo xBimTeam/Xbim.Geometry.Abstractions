@@ -21,6 +21,7 @@ namespace Xbim.Geometry.Abstractions
         /// </summary>
         string Category { get; set; }
         
+       
 
     }
 }

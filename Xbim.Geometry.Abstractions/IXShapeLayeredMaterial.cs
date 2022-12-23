@@ -6,5 +6,6 @@ namespace Xbim.Geometry.Abstractions
     {
         IList<IXShapeMaterial> MaterialList { get; }
         IXDirection LayerSetDirection { get; }
+        bool IsReversed { get; }
     }
 }
