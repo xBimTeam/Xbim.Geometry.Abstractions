@@ -7,7 +7,7 @@ namespace Xbim.Geometry.Abstractions
         /// <summary>
         /// Optional dictionary of Colours, the int key is the id of the IfcGeometricRepresentationContext that the colour is to be used in
         /// </summary>
-        IDictionary<int, IXShapeColour> MaterialColours { get; set; }
+        IDictionary<int, IXShapeColour> MaterialColours { get; }
         /// <summary>
         /// Identifier for the material, it can be made unique bu the Category
         /// </summary>
