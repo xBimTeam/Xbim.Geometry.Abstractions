@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Xbim.Geometry.Abstractions
+﻿namespace Xbim.Geometry.Abstractions
 {
     /// <summary>
     /// Represents a component with a location
@@ -12,5 +8,7 @@ namespace Xbim.Geometry.Abstractions
         IXShapeComponent Component { get; set; }
         IXLocation Location { get; set; }
         IXMatrix Transformation { get; set; }
+        IXShapeMaterialItem ShapeMaterial { get; set; }
+        IXShapeColour ShapeColour { get; set; }
     }
 }
