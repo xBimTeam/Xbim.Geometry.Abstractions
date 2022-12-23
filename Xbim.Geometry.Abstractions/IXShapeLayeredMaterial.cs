@@ -4,7 +4,7 @@ namespace Xbim.Geometry.Abstractions
 {
     public interface IXShapeLayeredMaterial : IXShapeItem
     {
-        IList<IXShapeMaterial> MaterialList { get; }
+        IList<IXShapeMaterialLayer> MaterialLayerList { get; }
         IXDirection LayerSetDirection { get; }
         bool IsReversed { get; }
     }
