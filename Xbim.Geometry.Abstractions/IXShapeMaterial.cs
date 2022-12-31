@@ -20,8 +20,8 @@ namespace Xbim.Geometry.Abstractions
         /// Sub-Qualifier of the name for distinguishing uniqueness
         /// </summary>
         string Category { get; set; }
-        
-       
+
+        double Fraction { get; set; }
 
     }
 }
