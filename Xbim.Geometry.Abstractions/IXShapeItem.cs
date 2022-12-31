@@ -2,7 +2,7 @@
 {
     public interface IXShapeItem
     {
-        int Id { get; }
+        int Id { get; set; }
         
         NodeType NodeType { get;  }
        
