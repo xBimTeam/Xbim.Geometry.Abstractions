@@ -14,7 +14,7 @@ namespace Xbim.Geometry.Abstractions
 
         IEnumerable<IXShapeGeometry> Geometries { get; }
         IEnumerable<IXShapeColour> Colours { get; }
-        IEnumerable<IXShapeMaterial> Materials { get; }
+        IEnumerable<IXShapeMaterialItem> Materials { get; }
 
         /// <summary>
         /// Saves all state and returns the fully qualified name of the store database
@@ -53,13 +53,15 @@ namespace Xbim.Geometry.Abstractions
         /// <returns>true is a new element has been created</returns>
         bool TryAddColour(IXShapeColour colourPrototype);
 
+        bool TryAddMaterial(IXShapeMaterialItem materialPrototype);
+
         bool TryGetAssembly(int id, out IXShapeAssembly shapeAssembly);
 
         bool TryGetGeometry(int id, out IXShapeGeometry shapeGeometry);
 
 
         bool TryGetColour(int id, out IXShapeColour shapeColour);
-
+        bool TryGetMaterial(int id, out IXShapeMaterialItem shapeMaterial);
         /// <summary>
         /// Adds a reference between parent and child  with a location , the child could be another assembly or a geometry
         /// </summary>
