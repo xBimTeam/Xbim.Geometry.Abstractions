@@ -45,7 +45,7 @@ namespace Xbim.Geometry.Abstractions
         /// <param name="ifcType"></param>
         /// <param name="toAssembly"></param>
         /// <returns></returns>
-        IXShapeGeometry AddNewFeaturedGeometry(IXShape featuredShape, short ifcType, IXShapeAssembly toAssembly);
+        IXShapeGeometry AddNewFeaturedGeometry(IXShape featuredShape, Type ifcType, IXShapeAssembly toAssembly);
         /// <summary>
         /// Creates a new part in the store using the colourPrototype definition. If the material already exists it is not replaced, existing value is returned
         /// </summary>
