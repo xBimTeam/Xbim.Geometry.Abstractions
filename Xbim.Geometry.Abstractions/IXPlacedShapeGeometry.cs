@@ -8,7 +8,7 @@ namespace Xbim.Geometry.Abstractions
         IXLocation Location { get; set; }
         IXShapeGeometry Geometry { get; set; }
         IXShapeColour Colour { get; set; }
-        IXShapeMaterial Material { get; set; }
+        IXShapeMaterialItem Material { get; set; }
         IXMatrix Transformation { get; set; }
     }
 }
