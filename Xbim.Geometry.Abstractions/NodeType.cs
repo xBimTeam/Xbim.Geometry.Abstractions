@@ -10,6 +10,7 @@
         Colour = 5,
         BRepShapeWithFeatures = 6,
         LayeredMaterial = 7,
-        Material = 8
+        Material = 8,
+        MaterialConstituent = 9
     }
 }
