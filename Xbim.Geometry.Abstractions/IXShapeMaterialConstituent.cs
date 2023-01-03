@@ -2,7 +2,7 @@
 {
     public interface IXShapeMaterialConstituent : IXShapeMaterialItem
     {
-        string Name { get; set; }
+        //string Name { get; set; }
         IXShapeMaterial Material { get; set; }
         double Fraction { get; set; }
     }

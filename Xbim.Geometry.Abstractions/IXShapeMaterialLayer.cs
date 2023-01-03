@@ -2,7 +2,7 @@
 {
     public  interface IXShapeMaterialLayer
     {
-        string Name { get; set; }
+        //string Name { get; set; }
         double Thickness { get; set; }
         IXShapeMaterial Material { get; set; }
     }
