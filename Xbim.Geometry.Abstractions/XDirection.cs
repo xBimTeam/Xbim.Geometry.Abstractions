@@ -3,32 +3,33 @@
     public class XDirection : IXDirection
     {
         bool _is3d = false;
-        double _x;
-        double _y;
-        double _z;
 
+        public XDirection()
+        {
+
+        }
         public XDirection(double x, double y, double z) 
         {
             _is3d = true;
-            _x = x;
-            _y = y;
-            _z = z;
+            X = x;
+            Y = y;
+            Y = z;
         }
         public XDirection(double x, double y)
         {
             _is3d = false;
-            _x = x;
-            _y = y;
-         
+            X = x;
+            Y = y;
         }
-        public double X => _x;
+        public double X { get; set; }
+        public double Y { get; set; }
 
-        public double Y => _y;
-
-        public double Z => _z;
+        public double Z { get; set; }
 
         public bool Is3d => _is3d;
 
         public bool IsNull => false;
+
+       
     }
 }
