@@ -64,6 +64,17 @@ namespace Xbim.Geometry.Abstractions
         IXShape Combine(IEnumerable<IXShape> shapes);
 
         /// <summary>
+        /// Determines whether the specified shapes are colliding.
+        /// </summary>
+        /// <param name="shape1">The first shape.</param>
+        /// <param name="shape2">The second shape.</param>
+        /// <param name="precision">The precision.</param>
+        /// <returns>
+        ///   <c>true</c> if the specified shape1 is colliding with shape2; otherwise, <c>false</c>.
+        /// </returns>
+        bool IsColliding(IXShape shape1, IXShape shape2, double precision);
+
+        /// <summary>
         /// Creates a mesh of the shape, a call to Triangulation must be made on the shape prior to this call
         /// An empty mesh will be returned if no triangulation is present
         /// use has curves to see if a finer or course mesh can be calculated
