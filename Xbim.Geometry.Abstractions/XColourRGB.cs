@@ -2,7 +2,7 @@
 
 namespace Xbim.Geometry.Abstractions
 {
-    public struct XColourRGB : IXColourRGB
+    public class XColourRGB : IXColourRGB
     {
         public XColourRGB(double red, double green, double blue)
         {
