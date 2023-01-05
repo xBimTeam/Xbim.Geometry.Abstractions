@@ -9,6 +9,6 @@ namespace Xbim.Geometry.Abstractions
     /// </summary>
     public  interface IXShapeComponent : IXShapeItem
     {
-        Type IfcType { get; set; }
+        short IfcType { get; set; }
     }
 }
