@@ -1,6 +1,6 @@
 ﻿namespace Xbim.Geometry.Abstractions
 {
-    public interface IXLocation
+    public interface IXLocation: IXMatrix
     {
         double Scale { get; }
         IXPoint Translation { get;}
