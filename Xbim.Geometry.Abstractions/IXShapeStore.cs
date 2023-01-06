@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Xbim.Geometry.Abstractions
 {
@@ -46,6 +45,7 @@ namespace Xbim.Geometry.Abstractions
         /// <param name="toAssembly"></param>
         /// <returns></returns>
         IXShapeGeometry AddNewFeaturedGeometry(IXShape featuredShape, short ifcType, IXShapeAssembly toAssembly, IXShapeColour colour);
+
         /// <summary>
         /// Creates a new part in the store using the colourPrototype definition. If the material already exists it is not replaced, existing value is returned
         /// </summary>
@@ -55,13 +55,19 @@ namespace Xbim.Geometry.Abstractions
 
         bool TryAddMaterial(IXShapeMaterialItem materialPrototype);
 
+        bool TryAddModelFactor(IXModelFactor modelFactor);
+
         bool TryGetAssembly(int id, out IXShapeAssembly shapeAssembly);
 
         bool TryGetGeometry(int id, out IXShapeGeometry shapeGeometry);
 
-
         bool TryGetColour(int id, out IXShapeColour shapeColour);
+
         bool TryGetMaterial(int id, out IXShapeMaterialItem shapeMaterial);
+
+        bool TryGetModelFactor(string name, out IXModelFactor modelFactor);
+
+
         /// <summary>
         /// Adds a reference between parent and child  with a location , the child could be another assembly or a geometry
         /// </summary>
@@ -69,7 +75,7 @@ namespace Xbim.Geometry.Abstractions
         /// <param name="child"></param>
         /// <param name="location"></param>
         /// <returns></returns>
-        IXShapeInstance AddReference(IXShapeAssembly parent, IXShapeComponent child, IXLocation location = null, IXMatrix transform = null, IXShapeMaterialItem material = null, IXShapeColour colour=null);
+        IXShapeInstance AddReference(IXShapeAssembly parent, IXShapeComponent child, IXLocation location = null, IXMatrix transform = null, IXShapeMaterialItem material = null, IXShapeColour colour = null);
 
         /// <summary>
         /// Returns a list of shapes with their locations for the specified assembly, if assembly is null all located shapes are returned in the store
