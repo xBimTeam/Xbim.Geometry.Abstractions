@@ -12,6 +12,7 @@
         BRepShapeWithFeatures,
         LayeredMaterial,
         Material,
-        MaterialConstituent
+        MaterialConstituent,
+        ProductGroup //IFC Assembly or IFC Group
     }
 }
