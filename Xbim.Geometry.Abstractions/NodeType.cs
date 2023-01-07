@@ -13,6 +13,7 @@
         LayeredMaterial,
         Material,
         MaterialConstituent,
-        ProductGroup //IFC Assembly or IFC Group
+        ProductGroup, //IFC Assembly or IFC Group
+        BRepShapePart //Part of a shape, normally of a different colour or texture
     }
 }
