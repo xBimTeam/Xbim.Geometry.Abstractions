@@ -4,7 +4,7 @@
     {
         int Id { get; set; }
         
-        NodeType NodeType { get;  }
+        NodeType NodeType { get; set; }
        
     }
 }
