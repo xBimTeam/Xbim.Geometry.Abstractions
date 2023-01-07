@@ -8,7 +8,8 @@
         IXDirection BuildDirection2d(double x, double y);
         IXLocation BuildLocation(double tx, double ty, double tz, double sc, double qw, double qx, double qy, double qz);
         IXMatrix BuildMatrix(double[] values);
-      
 
+        IXAxisAlignedBoundingBox Moved(IXAxisAlignedBoundingBox box, IXLocation newLocation);
+        IXAxisAlignedBoundingBox BuildBoundingBox();
     }
 }
