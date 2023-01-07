@@ -29,5 +29,6 @@ namespace Xbim.Geometry.Abstractions
         double OffsetZ { get; }
         double[] Values { get; }
         IXMatrix Multiply(IXMatrix matrix);
+        byte[] ToByteArray();
     }
 }
