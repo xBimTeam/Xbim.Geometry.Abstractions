@@ -11,5 +11,6 @@
 
         IXAxisAlignedBoundingBox Moved(IXAxisAlignedBoundingBox box, IXLocation newLocation);
         IXAxisAlignedBoundingBox BuildBoundingBox();
+        IXAxisAlignedBoundingBox BuildBoundingBox(double x, double y, double z, double sizeX, double sizeY, double sizeZ );
     }
 }
