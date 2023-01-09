@@ -12,5 +12,6 @@
         IXAxisAlignedBoundingBox Union(IXAxisAlignedBoundingBox other);
         bool IsVoid { get; }
         IXPoint Centroid { get; }
+        IXAxisAlignedBoundingBox Translated(IXVector translation);
     }
 }
