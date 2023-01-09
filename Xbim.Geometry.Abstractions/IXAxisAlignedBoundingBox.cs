@@ -13,5 +13,6 @@
         bool IsVoid { get; }
         IXPoint Centroid { get; }
         IXAxisAlignedBoundingBox Translated(double xTranslation, double yTranslation, double zTranslation);
+        IXAxisAlignedBoundingBox Translated(IXPoint translation);
     }
 }
