@@ -9,6 +9,6 @@
         
         IXLocation Inverted();
         IXLocation ScaledBy(double scaleFactor);
-        IXPoint SetTranslation(double x, double y, double z);
+        void SetTranslation(double x, double y, double z);
     }
 }
