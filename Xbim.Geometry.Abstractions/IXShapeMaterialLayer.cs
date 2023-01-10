@@ -1,6 +1,6 @@
 ﻿namespace Xbim.Geometry.Abstractions
 {
-    public  interface IXShapeMaterialLayer
+    public  interface IXShapeMaterialLayer : IXShapeMaterialItem
     {
         //string Name { get; set; }
         double Thickness { get; set; }
