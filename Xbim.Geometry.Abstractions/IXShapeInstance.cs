@@ -10,7 +10,6 @@
         IXMatrix Transformation { get; set; }
         IXShapeMaterialItem ShapeMaterial { get; set; }
         IXShapeColour ShapeColour { get; set; }
-        IXDirection LayerSetDirection { get; }
-        bool LayerSetIsReversed { get; }
+        
     }
 }
