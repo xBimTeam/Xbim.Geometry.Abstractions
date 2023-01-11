@@ -1,4 +1,4 @@
-﻿using QUT.Gppg;
+﻿
 using Xbim.Ifc4.Interfaces;
 
 namespace Xbim.Geometry.Abstractions
@@ -7,6 +7,8 @@ namespace Xbim.Geometry.Abstractions
     {
         IXAxisPlacement2d BuildAxis2Placement2d(IXPoint location, IXVector XaxisDirection);
         IXAxis2Placement3d BuildAxis2Placement3d(IXPoint location, IXVector XaxisDirection, IXVector ZaxisDirection);
+        IXAxisPlacement2d BuildAxis2Placement2d(IXPoint location, IXDirection XaxisDirection);
+        IXAxis2Placement3d BuildAxis2Placement3d(IXPoint location, IXDirection XaxisDirection, IXDirection ZaxisDirection);
         bool IsFacingAwayFrom(IXFace face, IXDirection direction);
         IXPlane BuildPlane(IIfcPlane plane);
         double Distance(IXPoint a, IXPoint b);
