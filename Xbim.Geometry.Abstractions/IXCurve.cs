@@ -21,7 +21,7 @@ namespace Xbim.Geometry.Abstractions
         /// <param name="uParam"></param>
         /// <param name="normal">Normal at param uParam</param>
         /// <returns></returns>
-        IXPoint GetFirstDerivative(double uParam,  out IXVector direction);
+        IXPoint GetFirstDerivative(double uParam,  out IXDirection direction);
         /// <summary>
         /// 
         /// </summary>
@@ -30,6 +30,6 @@ namespace Xbim.Geometry.Abstractions
         /// <param name="direction"></param>
         /// <param name="normal"></param>
         /// <returns></returns>
-        IXPoint GetSecondDerivative(double uParam, out IXVector direction, out IXVector normal);
+        IXPoint GetSecondDerivative(double uParam, out IXDirection direction, out IXDirection normal);
     }
 }
