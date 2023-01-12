@@ -12,6 +12,7 @@ namespace Xbim.Geometry.Abstractions
         IXShape Cut(IXShape body, IXShape subtraction);
         IXShape Union(IXShape body, IEnumerable<IXShape> additions);
         IXShape Cut(IXShape body, IEnumerable<IXShape> subtractions);
+        IXShape Intersect(IXShape body, IEnumerable<IXShape> others);
         IEnumerable<IXSolid> CollectSolids(IXShape collectFrom);
         IXShape Build(IIfcGeometricRepresentationItem geomRep);
         Task<IXShape> BuildAsync(IIfcGeometricRepresentationItem geomRep);
