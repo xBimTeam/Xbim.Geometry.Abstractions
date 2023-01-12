@@ -10,6 +10,7 @@ namespace Xbim.Geometry.Abstractions
 
         IXShape Union(IXShape body, IXShape addition);
         IXShape Cut(IXShape body, IXShape subtraction);
+        IXShape Intersect(IXShape body, IXShape other);
         IXShape Union(IXShape body, IEnumerable<IXShape> additions);
         IXShape Cut(IXShape body, IEnumerable<IXShape> subtractions);
         IXShape Intersect(IXShape body, IEnumerable<IXShape> others);
