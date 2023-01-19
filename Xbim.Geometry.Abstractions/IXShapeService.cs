@@ -21,12 +21,12 @@ namespace Xbim.Geometry.Abstractions
 
         IXShape Transform(IXShape shape, IXMatrix transformMatrix);
         void Triangulate(IXShape shape);
-        IXShape Union(IXShape body, IXShape addition);
-        IXShape Cut(IXShape body, IXShape subtraction);
-        IXShape Intersect(IXShape body, IXShape intersect);
-        IXShape Union(IXShape body, IEnumerable<IXShape> additions);
-        IXShape Cut(IXShape body, IEnumerable<IXShape> subtractions);
-        IXShape Intersect(IXShape body, IEnumerable<IXShape> intersections);
+        IXShape Union(IXShape body, IXShape addition, double precision);
+        IXShape Cut(IXShape body, IXShape subtraction, double precision);
+        IXShape Intersect(IXShape body, IXShape intersect, double precision);
+        IXShape Union(IXShape body, IEnumerable<IXShape> additions, double precision);
+        IXShape Cut(IXShape body, IEnumerable<IXShape> subtractions, double precision);
+        IXShape Intersect(IXShape body, IEnumerable<IXShape> intersections, double precision);
         /// <summary>
         /// Removes any placement
         /// </summary>

@@ -8,10 +8,12 @@ namespace Xbim.Geometry.Abstractions
     public interface IXSolidService : IXModelScoped
     {
 
-        IXShape Union(IXShape body, IXShape addition);
-        IXShape Cut(IXShape body, IXShape subtraction);
-        IXShape Union(IXShape body, IEnumerable<IXShape> additions);
-        IXShape Cut(IXShape body, IEnumerable<IXShape> subtractions);
+        IXShape Union(IXShape body, IXShape addition, double precision);
+        IXShape Cut(IXShape body, IXShape subtraction, double precision);
+        IXShape Intersect(IXShape body, IXShape other, double precision);
+        IXShape Union(IXShape body, IEnumerable<IXShape> additions, double precision);
+        IXShape Cut(IXShape body, IEnumerable<IXShape> subtractions, double precision);
+        IXShape Intersect(IXShape body, IEnumerable<IXShape> others, double precision);
         IEnumerable<IXSolid> CollectSolids(IXShape collectFrom);
         IXShape Build(IIfcGeometricRepresentationItem geomRep);
         Task<IXShape> BuildAsync(IIfcGeometricRepresentationItem geomRep);
