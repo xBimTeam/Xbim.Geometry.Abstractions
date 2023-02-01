@@ -12,6 +12,7 @@
         BRepShapeWithFeatures,
         LayeredMaterial,
         Material,
+        MaterialList,
         MaterialConstituent,
         LayeredMaterialInstance,
         MaterialLayer,
