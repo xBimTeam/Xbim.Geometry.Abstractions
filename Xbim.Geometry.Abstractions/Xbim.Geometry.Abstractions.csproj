@@ -22,7 +22,7 @@
 
 	
 	<ItemGroup>
-		<PackageReference Include="Xbim.Essentials" Version="5.9.382-develop" />
+		<PackageReference Include="Xbim.Essentials" Version="5.9.395-develop" />
 	</ItemGroup>
 
 	<ItemGroup>
