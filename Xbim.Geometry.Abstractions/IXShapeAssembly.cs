@@ -7,8 +7,8 @@ namespace Xbim.Geometry.Abstractions
     {
         IEnumerable<IXShapeInstance> Instances { get; }
         void AddInstance(IXShapeInstance component);
-        
-        
+        IEnumerable<IXShapeAssembly> Openings { get; }
+        IEnumerable<IXShapeAssembly> Projections { get; }
         bool IsSubAssembly { get; set; }
         
     }
