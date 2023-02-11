@@ -7,5 +7,6 @@ namespace Xbim.Geometry.Abstractions
         IXFace BuildFace(IIfcProfileDef profileDef);
         IXWire BuildWire(IIfcProfileDef profileDef);
         IXEdge BuildEdge(IIfcProfileDef profileDef);
+        IXCurve BuildCurve(IIfcProfileDef profileDef);
     }
 }
