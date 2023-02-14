@@ -69,10 +69,11 @@ namespace Xbim.Geometry.Abstractions
         /// <param name="shape1">The first shape.</param>
         /// <param name="shape2">The second shape.</param>
         /// <param name="meshFactors">The mesh factors used in the internal shapes proximity test.</param>
+        /// <param name="includeTangents">if set to <c>true</c> [include tangents].</param>
         /// <returns>
         ///   <c>true</c> if the specified shape1 is overlapping with shape2; otherwise, <c>false</c>.
         /// </returns>
-        bool IsOverlapping(IXShape shape1, IXShape shape2, IXMeshFactors meshFactors);
+        bool IsOverlapping(IXShape shape1, IXShape shape2, IXMeshFactors meshFactors, bool includeTangents);
 
         /// <summary>
         /// Creates a mesh of the shape, a call to Triangulation must be made on the shape prior to this call
