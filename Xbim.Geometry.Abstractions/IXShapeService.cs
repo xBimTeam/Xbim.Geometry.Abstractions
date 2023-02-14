@@ -69,18 +69,21 @@ namespace Xbim.Geometry.Abstractions
         /// <param name="shape1">The first shape.</param>
         /// <param name="shape2">The second shape.</param>
         /// <param name="meshFactors">The mesh factors used in the internal shapes proximity test.</param>
+        /// <param name="includeTangents">if set to <c>true</c> [include tangents].</param>
         /// <returns>
         ///   <c>true</c> if the specified shape1 is overlapping with shape2; otherwise, <c>false</c>.
         /// </returns>
-        bool IsOverlapping(IXShape shape1, IXShape shape2, IXMeshFactors meshFactors);
+        bool IsOverlapping(IXShape shape1, IXShape shape2, IXMeshFactors meshFactors, bool includeTangents);
 
         /// <summary>
         /// Creates a mesh of the shape, a call to Triangulation must be made on the shape prior to this call
         /// An empty mesh will be returned if no triangulation is present
         /// use has curves to see if a finer or course mesh can be calculated
         /// </summary>
-        /// <param name="shape"></param>
+        /// <param name="shape">The shape.</param>
         /// <param name="meshFactors">Factors to control the mesh triangulation granularity</param>
+        /// <param name="scale">The scale.</param>
+        /// <param name="bounds">The bounds.</param>
         /// <param name="hasCurves">true if the shape has any curved edges or faces, use to determine if finer or courser meshing will return a different result</param>
         /// <returns></returns>
         byte[] CreateWexBimMesh(IXShape shape, IXMeshFactors meshFactors, double scale, out IXAxisAlignedBoundingBox bounds, out bool hasCurves);
