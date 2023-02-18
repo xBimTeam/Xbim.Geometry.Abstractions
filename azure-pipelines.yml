@@ -80,11 +80,9 @@ steps:
     versionEnvVar: packageVersion
 - task: NuGetCommand@2
   displayName: 'Pushing to Develop'
-  condition: ne(variables['Build.SourceBranch'], 'refs/heads/master')
+  condition: ne(variables['Build.SourceBranch'], 'refs/heads/develop')
   inputs:
     command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
-    nuGetFeedType: 'external'
-    publishFeedCredentials: 'MyGetDev'
-    versioningScheme: byEnvVar
-    versionEnvVar: packageVersion
+    nuGetFeedType: 'internal'
+    publishVstsFeed: '2591d379-784d-4b57-88f5-a932c93cbffd'
