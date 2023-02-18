@@ -79,8 +79,10 @@ namespace Xbim.Geometry.Abstractions
         /// An empty mesh will be returned if no triangulation is present
         /// use has curves to see if a finer or course mesh can be calculated
         /// </summary>
-        /// <param name="shape"></param>
+        /// <param name="shape">The shape.</param>
         /// <param name="meshFactors">Factors to control the mesh triangulation granularity</param>
+        /// <param name="scale">The scale.</param>
+        /// <param name="bounds">The bounds.</param>
         /// <param name="hasCurves">true if the shape has any curved edges or faces, use to determine if finer or courser meshing will return a different result</param>
         /// <returns></returns>
         byte[] CreateWexBimMesh(IXShape shape, IXMeshFactors meshFactors, double scale, out IXAxisAlignedBoundingBox bounds, out bool hasCurves);
