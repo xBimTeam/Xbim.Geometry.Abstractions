@@ -38,7 +38,7 @@ steps:
 - script: |
     echo ##vso[task.setvariable variable=packageversion]$(major).$(minor).$(buildNo)-$(Build.SourceBranchName)
   displayName: 'Setting Prerelease Nuget PackageVersion'
-  condition: ne(variables['Build.SourceBranch'], 'refs/heads/develop')
+  condition: ne(variables['Build.SourceBranch'], 'refs/heads/master')
 
 
 
@@ -53,7 +53,7 @@ steps:
 - script: | 
     echo ##vso[task.setvariable variable=fileversion]$(major).$(minor).0.$(buildNo)
   displayName: 'Setting Prerelease FileVersion'
-  condition: ne(variables['Build.SourceBranch'], 'refs/heads/develop')
+  condition: ne(variables['Build.SourceBranch'], 'refs/heads/master')
 - task: DotNetCoreCLI@2
   displayName: 'Restoring packages'
   inputs:
@@ -63,11 +63,26 @@ steps:
     nugetConfigPath: 'nuget.config'
     externalFeedCredentials: 'MyGetDev, MyGetMaster'
 - task: DotNetCoreCLI@2
-  displayName: 'Packing'
+  displayName: 'Build and Packing'
   inputs:
     command: 'pack'
     packagesToPack: '**/*.csproj'
     versioningScheme: 'off'
+
+- task: CopyFiles@2
+  displayName: 'Copy Nuget packages to: $(build.artifactstagingdirectory)'
+  inputs:
+    SourceFolder: '$(build.sourcesdirectory)'
+    Contents: '**\bin\$(BuildConfiguration)\*.nupkg'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+  
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+
+
+
 - task: NuGetCommand@2
   displayName: 'Pushing to Master'
   condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')

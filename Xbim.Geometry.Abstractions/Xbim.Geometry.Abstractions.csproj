@@ -2,12 +2,12 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.0</TargetFrameworks>
-		<Version>6.1.304-develop</Version>
+		<Version>6.0.0.0</Version>
 		<Configurations>Debug;Release</Configurations>
 		<Platforms>AnyCPU</Platforms>
 		<LangVersion>9.0</LangVersion>
 		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
-		<PackageLicenseExpression></PackageLicenseExpression>
+    <PackageLicenseExpression>CDDL-1.0</PackageLicenseExpression>
 		<Authors>Steve Lockley</Authors>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<Title>Xbim Geometry Interfaces</Title>
@@ -22,7 +22,7 @@
 
 	
 	<ItemGroup>
-		<PackageReference Include="Xbim.Essentials" Version="5.9.406-develop" />
+		<PackageReference Include="Xbim.Essentials" Version="6.0.410-develop" />
 	</ItemGroup>
 
 	<ItemGroup>
