@@ -28,6 +28,8 @@ namespace Xbim.Geometry.Abstractions
         IXProfileFactory ProfileFactory { get; }
         IXMaterialFactory MaterialFactory { get; }
         IXProjectionFactory ProjectionFactory { get; }
+
+        IXBRepDocumentManager BRepDocumentManager { get; }  
         double Timeout { get; set; }
         /// <summary>
         /// The distance between two points less than or equal to which they are determined to be coincidental
