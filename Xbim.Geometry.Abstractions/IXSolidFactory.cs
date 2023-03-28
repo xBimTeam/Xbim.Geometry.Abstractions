@@ -8,7 +8,7 @@ namespace Xbim.Geometry.Abstractions
         IXShape Build(IIfcFacetedBrep ifcBrep);
         IXShape Build(IIfcFaceBasedSurfaceModel ifcSurfaceModel);
         IXSolid Build(IIfcCsgPrimitive3D ifcCsgPrimitive);
-        IXSolid Build(IIfcExtrudedAreaSolid ifcExtrudedAreaSolid);
+        IXShape Build(IIfcExtrudedAreaSolid ifcExtrudedAreaSolid);
         IXSolid Build(IIfcHalfSpaceSolid ifcHalfSpaceSolid);
     }
 }
