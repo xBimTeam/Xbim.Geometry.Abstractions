@@ -1,5 +1,6 @@
 ﻿namespace Xbim.Geometry.Abstractions
 {
+    //Todo (Ibrahim Saad): return IWexBimMesh instead of the triangulation buffer data
     public interface IXWexBimMeshFactory : IXModelScoped
     {
         byte[] CreateWexBimMesh(IXShape shape, out IXAxisAlignedBoundingBox bounds);
