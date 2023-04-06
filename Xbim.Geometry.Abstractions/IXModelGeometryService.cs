@@ -28,6 +28,7 @@ namespace Xbim.Geometry.Abstractions
         IXProfileFactory ProfileFactory { get; }
         IXMaterialFactory MaterialFactory { get; }
         IXProjectionFactory ProjectionFactory { get; }
+        IXWexBimMeshFactory WexBimMeshFactory { get; }
 
         IXBRepDocumentManager BRepDocumentManager { get; }  
         double Timeout { get; set; }
