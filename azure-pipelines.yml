@@ -94,8 +94,19 @@ steps:
     versionEnvVar: packageVersion
 
 - task: NuGetCommand@2
+  displayName: 'Pushing to MyGet Dev'
+  condition: ne(variables['Build.SourceBranch'], 'refs/heads/master')
+  inputs:
+    command: 'push'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
+    nuGetFeedType: 'external'
+    publishFeedCredentials: 'MyGetDev'
+    versioningScheme: byEnvVar
+    versionEnvVar: packageVersion
+
+- task: NuGetCommand@2
   displayName: 'Pushing to Develop'
-  condition: eq(variables['Build.SourceBranch'], 'refs/heads/develop')
+  condition: ne(variables['Build.SourceBranch'], 'refs/heads/master')
   inputs:
     command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
