@@ -40,8 +40,6 @@ steps:
   displayName: 'Setting Prerelease Nuget PackageVersion'
   condition: ne(variables['Build.SourceBranch'], 'refs/heads/master')
 
-
-
 # Windows script setting up $(fileversion) used to stamp AssemblyFileVersions. 
 # By convention we use 'Major.Minor.BuildNo.0' on Master and 'Major.Minor.0.BuildNo' on other branches
 # Master branch
@@ -49,11 +47,13 @@ steps:
     echo ##vso[task.setvariable variable=fileversion]$(major).$(minor).$(buildNo).0
   displayName: 'Setting FileVersion'
   condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
+
 # Any other branch
 - script: | 
     echo ##vso[task.setvariable variable=fileversion]$(major).$(minor).0.$(buildNo)
   displayName: 'Setting Prerelease FileVersion'
   condition: ne(variables['Build.SourceBranch'], 'refs/heads/master')
+
 - task: DotNetCoreCLI@2
   displayName: 'Restoring packages'
   inputs:
@@ -62,6 +62,7 @@ steps:
     feedsToUse: 'config'
     nugetConfigPath: 'nuget.config'
     externalFeedCredentials: 'MyGetDev, MyGetMaster'
+
 - task: DotNetCoreCLI@2
   displayName: 'Build and Packing'
   inputs:
@@ -81,8 +82,6 @@ steps:
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
 
-
-
 - task: NuGetCommand@2
   displayName: 'Pushing to Master'
   condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
@@ -93,6 +92,7 @@ steps:
     publishFeedCredentials: 'MyGetMaster'
     versioningScheme: byEnvVar
     versionEnvVar: packageVersion
+
 - task: NuGetCommand@2
   displayName: 'Pushing to Develop'
   condition: eq(variables['Build.SourceBranch'], 'refs/heads/develop')
