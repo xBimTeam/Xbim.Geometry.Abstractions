@@ -12,18 +12,24 @@ namespace Xbim.Geometry.Abstractions
         /// <summary>
         /// Create a 2D Polyline in the XY plane of the outer hull of the shape
         /// </summary>
-        /// <param name="shape"></param>
+        /// <param name="shape">The shape.</param>
         /// <param name="linearDeflection">The max deviation in model units of a line segment from the curve it segments</param>
         /// <param name="angularDeflection">the maximum angle of deflection (tangental continuity) in radians for curved lines, default is 30 degrees</param>
-        /// <returns>A closed loop of 2D points</returns>
-        IXFootprint CreateFootprint(IXShape shape, double linearDeflection, double angularDeflection = 0.52359877559829887307710723054658);
+        /// <param name="createExactFootprint">if set to <c>true</c> [create exact footprint].</param>
+        /// <returns>
+        /// A closed loop of 2D points
+        /// </returns>
+        IXFootprint CreateFootprint(IXShape shape, double linearDeflection, double angularDeflection = 0.52359877559829887307710723054658, bool createExactFootprint = true);
         /// <summary>
         /// Create a 2D Polyline in the XY plane of the outer hull of the shape
         /// Uses defaults for linear deflection of 25mm or 1 inch (if imperial model) and angular deflection of 30 degrees
         /// </summary>
         /// <param name="shape">Shape to footprint</param>
-        /// <returns>A closed loop of 2D points</returns>
-        IXFootprint CreateFootprint(IXShape shape);
+        /// <param name="createExactFootprint">if set to <c>true</c> [create exact footprint].</param>
+        /// <returns>
+        /// A closed loop of 2D points
+        /// </returns>
+        IXFootprint CreateFootprint(IXShape shape, bool createExactFootprint = true);
         /// <summary>
         /// Gets a shape that represents the edges of the project shape onto the Z=0 plane
         /// </summary>
