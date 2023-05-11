@@ -95,7 +95,7 @@ steps:
     versionEnvVar: packageVersion
 - task: NuGetCommand@2
   displayName: 'Pushing to Develop'
-  condition: ne(variables['Build.SourceBranch'], 'refs/heads/develop')
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/develop')
   inputs:
     command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'

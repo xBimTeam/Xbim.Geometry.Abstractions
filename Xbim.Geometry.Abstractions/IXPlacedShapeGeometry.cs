@@ -1,6 +1,4 @@
-﻿using Xbim.Common.Geometry;
-
-namespace Xbim.Geometry.Abstractions
+﻿namespace Xbim.Geometry.Abstractions
 {
     public interface IXPlacedShapeGeometry
     {
@@ -10,5 +8,8 @@ namespace Xbim.Geometry.Abstractions
         IXShapeColour Colour { get; set; }
         IXShapeMaterialItem Material { get; set; }
         IXShape Shape { get; set; }
+        public short IfcType { get; set; }
+        public short GeometryIfcType { get; internal set; }
+
     }
 }
