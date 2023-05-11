@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Xbim.Geometry.Abstractions.WexBim;
 
 namespace Xbim.Geometry.Abstractions
 {
@@ -89,6 +90,11 @@ namespace Xbim.Geometry.Abstractions
 
         IEnumerable<IXPlacedShapeGeometry> PlacedShapeGeometries();
         void StoreShape(IXShapeGeometry shapeGeometry, IXShape shape);
+        void StoreWexBimMesh(int id, IWexBimMesh mesh, IXAxisAlignedBoundingBox bounds = null);
+        void StoreBounds(int id, IXAxisAlignedBoundingBox bounds);
         IXShape RetrieveShape(IXShapeGeometry shapeGeometry);
+        IWexBimMesh RetrieveWexBimMesh(int id);
+        IWexBimMesh RetrieveWexBimMesh(int id, out IXAxisAlignedBoundingBox bounds);
+        IXAxisAlignedBoundingBox RetrieveBounds(int id);
     }
 }
