@@ -89,12 +89,11 @@ namespace Xbim.Geometry.Abstractions
         bool TryRemove(IXShapeGeometry productBodyShape);
 
         IEnumerable<IXPlacedShapeGeometry> PlacedShapeGeometries();
-        void StoreShape(IXShapeGeometry shapeGeometry, IXShape shape);
-        void StoreWexBimMesh(int id, IWexBimMesh mesh, IXAxisAlignedBoundingBox bounds = null);
+        void StoreShape(int id, IXShape shape);
+        void StoreWexBimMesh(int id, IWexBimMesh mesh, MeshGranularity granularity);
         void StoreBounds(int id, IXAxisAlignedBoundingBox bounds);
-        IXShape RetrieveShape(IXShapeGeometry shapeGeometry);
-        IWexBimMesh RetrieveWexBimMesh(int id);
-        IWexBimMesh RetrieveWexBimMesh(int id, out IXAxisAlignedBoundingBox bounds);
+        IXShape RetrieveShape(int id);
+        IWexBimMesh RetrieveWexBimMesh(int id, out MeshGranularity granularity);
         IXAxisAlignedBoundingBox RetrieveBounds(int id);
     }
 }
