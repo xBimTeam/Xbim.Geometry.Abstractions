@@ -9,7 +9,7 @@
         IXShapeMaterialItem Material { get; set; }
         IXShape Shape { get; set; }
         public short IfcType { get; set; }
-        public short GeometryIfcType { get; internal set; }
+        public short GeometryIfcType { get;  set; }
 
     }
 }
