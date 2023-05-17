@@ -93,7 +93,7 @@ namespace Xbim.Geometry.Abstractions
         void StoreWexBimMesh(int id, IWexBimMesh mesh, MeshGranularity granularity);
         void StoreBounds(int id, IXAxisAlignedBoundingBox bounds);
         IXShape RetrieveShape(int id);
-        IWexBimMesh RetrieveWexBimMesh(int id, out MeshGranularity granularity);
+        IDictionary<MeshGranularity, IWexBimMesh> RetrieveWexBims(int id, out MeshGranularity granularity);
         IXAxisAlignedBoundingBox RetrieveBounds(int id);
     }
 }
