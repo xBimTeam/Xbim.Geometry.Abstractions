@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Xbim.Common.Geometry;
-using Xbim.Geometry.Abstractions.WexBim;
 using Xbim.Ifc4.Interfaces;
 
 namespace Xbim.Geometry.Abstractions
@@ -19,7 +18,7 @@ namespace Xbim.Geometry.Abstractions
         string Convert(IXShape shape);
         string Convert(IXbimGeometryObject v5Shape);
 
-        IWexBimMesh Transform(IWexBimMesh mesh, IXMatrix transformMatrix);
+
         IXShape Transform(IXShape shape, IXMatrix transformMatrix);
         void Triangulate(IXShape shape);
         IXShape Union(IXShape body, IXShape addition, double precision);
