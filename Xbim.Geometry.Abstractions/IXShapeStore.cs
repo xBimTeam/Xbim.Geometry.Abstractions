@@ -95,5 +95,9 @@ namespace Xbim.Geometry.Abstractions
         IXShape RetrieveShape(int id);
         IDictionary<MeshGranularity, IWexBimMesh> RetrieveWexBims(int id);
         IXAxisAlignedBoundingBox RetrieveBounds(int id);
+
+        IWexBimMesh GetOrAddWexBimMesh(int id, MeshGranularity granularity);
+        IWexBimMesh AddWexBimMesh(int id, MeshGranularity granularity);
+        IWexBimMesh AddWexBimMesh(int id, IXShape shape, MeshGranularity granularity);
     }
 }
