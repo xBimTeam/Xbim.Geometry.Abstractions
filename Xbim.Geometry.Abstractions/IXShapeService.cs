@@ -74,5 +74,7 @@ namespace Xbim.Geometry.Abstractions
         /// </returns>
         bool IsOverlapping(IXShape shape1, IXShape shape2, IXMeshFactors meshFactors);
 
+        byte[] CreateWexBimMesh(IXShape shape, double tolerance, double linearDeflection, double angularDeflection, double scale, out IXAxisAlignedBoundingBox bounds);
+
     }
 }
