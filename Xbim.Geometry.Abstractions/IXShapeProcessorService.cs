@@ -18,7 +18,7 @@ namespace Xbim.Geometry.Abstractions
         /// <param name="maxDegreeOfParallelism">how many thread to launcg, default is 2</param>
         /// <param name="productFilter">the filter of ifc products to add into the store</param>
         /// <returns>true if the operation was successful. It is the responsibility of the calling function to delete any unwanted databases created</returns>
-        Task CreateShapeStoreAsync(string ifcDbFileName, string outputFileName = null, int maxDegreeOfParallelism = 2, Func<IIfcProduct, bool> productFilter = null);
+        Task CreateShapeStoreAsync(string ifcDbFileName, string outputFileName = null, int maxDegreeOfParallelism = 2, Func<IIfcProduct, bool> productFilter = null, MeshGranularity granularity = MeshGranularity.Normal);
 
         IXShapeStore OpenShapeStore(string shapeStoreFileName);
 

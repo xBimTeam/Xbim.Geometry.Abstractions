@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Xbim.Geometry.Abstractions.WexBim;
 
 namespace Xbim.Geometry.Abstractions
 {
@@ -88,7 +89,15 @@ namespace Xbim.Geometry.Abstractions
         bool TryRemove(IXShapeGeometry productBodyShape);
 
         IEnumerable<IXPlacedShapeGeometry> PlacedShapeGeometries();
-        void StoreShape(IXShapeGeometry shapeGeometry, IXShape shape);
-        IXShape RetrieveShape(IXShapeGeometry shapeGeometry);
+        void StoreShape(int id, int status, IXShape shape);
+        void StoreWexBimMesh(int id, IWexBimMesh mesh, MeshGranularity granularity);
+        void StoreBounds(int id, IXAxisAlignedBoundingBox bounds);
+        IXShape RetrieveShape(int id);
+        IDictionary<MeshGranularity, IWexBimMesh> RetrieveWexBims(int id);
+        IXAxisAlignedBoundingBox RetrieveBounds(int id);
+
+        IWexBimMesh GetOrAddWexBimMesh(int id, MeshGranularity granularity);
+        IWexBimMesh AddWexBimMesh(int id, MeshGranularity granularity);
+        IWexBimMesh AddWexBimMesh(int id, IXShape shape, MeshGranularity granularity);
     }
 }

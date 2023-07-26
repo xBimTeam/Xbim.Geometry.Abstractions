@@ -1,8 +1,10 @@
-﻿namespace Xbim.Geometry.Abstractions
+﻿using Xbim.Common;
+
+namespace Xbim.Geometry.Abstractions
 {
     public interface IXShapeStoreFactory 
     {
-        IXShapeStore GetNew();
+        IXShapeStore GetNew(IModel model);
         IXShapeStore Open(string storeName);
     }
 }
