@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Security.Principal;
 using Xbim.Common;
 using Xbim.Ifc4.Interfaces;
 
@@ -11,14 +10,11 @@ namespace Xbim.Geometry.Abstractions
 
         IXLoggingService LoggingService { get; }
         IXVertexFactory VertexFactory { get; }
-
         IXGeometryFactory GeometryFactory { get; }
         IXCurveFactory CurveFactory { get; }
         IXSurfaceFactory SurfaceFactory { get; }
-
         IXEdgeFactory EdgeFactory { get; }
         IXWireFactory WireFactory { get; }
-
         IXFaceFactory FaceFactory { get; }
         IXShellFactory ShellFactory { get; }
         IXSolidFactory SolidFactory { get; }
@@ -29,8 +25,9 @@ namespace Xbim.Geometry.Abstractions
         IXMaterialFactory MaterialFactory { get; }
         IXProjectionFactory ProjectionFactory { get; }
         IXWexBimMeshFactory WexBimMeshFactory { get; }
+        IXBRepDocumentManager BRepDocumentManager { get; }
+        IXModelPlacementBuilder ModelPlacementBuilder { get; }
 
-        IXBRepDocumentManager BRepDocumentManager { get; }  
         double Timeout { get; set; }
         /// <summary>
         /// The distance between two points less than or equal to which they are determined to be coincidental
