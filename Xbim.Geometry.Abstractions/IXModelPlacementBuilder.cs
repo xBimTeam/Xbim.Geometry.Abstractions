@@ -6,6 +6,6 @@ namespace Xbim.Geometry.Abstractions
     {
         IXLocation BuildLocation(IIfcObjectPlacement placement, bool adjustWcs);
 
-        public IXLocation WorldCoordinateSystem { get; }
+        public IXPoint WorldCoordinateSystem { get; }
     }
 }
