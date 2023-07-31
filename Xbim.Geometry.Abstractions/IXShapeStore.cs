@@ -91,7 +91,7 @@ namespace Xbim.Geometry.Abstractions
 
         bool TryRemove(IXShapeGeometry productBodyShape);
 
-        IEnumerable<IXPlacedShapeGeometry> PlacedShapeGeometries();
+        IEnumerable<IXPlacedShapeGeometry> PlacedShapeGeometries(bool adjustWCS = true);
 
         void StoreShape(int id, int status, IXShape shape);
         
@@ -110,5 +110,7 @@ namespace Xbim.Geometry.Abstractions
         IWexBimMesh AddWexBimMesh(int id, MeshGranularity granularity);
 
         IWexBimMesh AddWexBimMesh(int id, IXShape shape, MeshGranularity granularity);
+
+        void SetWCS(IXPoint wcs);
     }
 }
