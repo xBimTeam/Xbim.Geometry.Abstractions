@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Xbim.Geometry.Abstractions
 {
@@ -9,6 +8,5 @@ namespace Xbim.Geometry.Abstractions
         double Red { get; }
         double Green { get;  }
         double Blue { get; }
-        
     }
 }

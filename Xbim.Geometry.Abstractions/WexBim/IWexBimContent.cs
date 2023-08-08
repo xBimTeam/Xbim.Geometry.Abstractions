@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Xbim.Common.Geometry;
 
 namespace Xbim.Geometry.Abstractions.WexBim
