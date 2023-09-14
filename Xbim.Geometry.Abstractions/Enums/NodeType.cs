@@ -18,6 +18,7 @@
         MaterialLayer,
         ProductGroup, //IFC Assembly or IFC Group
         BRepShapePart, //Part of a shape, normally of a different colour or texture
-        BRepShapeNonUniformTransformed //shape that has undergoen a nin uniform transformation (stretch)
+        BRepShapeNonUniformTransformed, //shape that has undergone a non uniform transformation (stretch)
+        TriangulatedShape,
     }
 }
