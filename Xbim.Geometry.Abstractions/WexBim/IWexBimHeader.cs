@@ -16,7 +16,6 @@ namespace Xbim.Geometry.Abstractions.WexBim
         int TriangleCount { get; set; }
         byte Version { get; }
         int VertexCount { get; set; }
-
         void WriteToStream(BinaryWriter writer);
     }
 }
