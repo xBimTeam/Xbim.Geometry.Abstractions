@@ -17,6 +17,7 @@
         IfcFixedReferenceSweptAreaSolid,
         IfcRevolvedAreaSolid,
         IfcRevolvedAreaSolidTapered,
-        IfcSurfaceCurveSweptAreaSolid
+        IfcSectionedSolidHorizontal, // new in IFC4x1 Release Candidate 3
+		IfcSurfaceCurveSweptAreaSolid, 
     }
 }
