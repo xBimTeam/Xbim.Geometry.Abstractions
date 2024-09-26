@@ -18,11 +18,12 @@
 		<RepositoryUrl>https://github.com/xBimTeam/Xbim.Geometry.Abstractions</RepositoryUrl>
 		<PackageTags>Xbim;BRep;Geometry;Interfaces</PackageTags>
 		<PackageReleaseNotes>This is the initial release of the Geometry Interfaces for version 6 of the Xbim Geometry Engine</PackageReleaseNotes>
+		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
 	
 	<ItemGroup>
-		<PackageReference Include="Xbim.Essentials" Version="6.0.475-develop" />
+		<PackageReference Include="Xbim.Essentials" Version="6.0.479-develop" />
 	</ItemGroup>
 
 	<ItemGroup>

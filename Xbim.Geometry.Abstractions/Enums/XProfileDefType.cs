@@ -20,8 +20,10 @@
         IfcRectangleHollowProfileDef,
         IfcRoundedRectangleProfileDef,
         IfcTShapeProfileDef,
-        IfcTrapeziumProfileDef,
+        IfcTrapeziumProfileDef, // deprecated in 4x3
         IfcUShapeProfileDef,
-        IfcZShapeProfileDef
+        IfcZShapeProfileDef,
+        
+        IfcOpenCrossProfileDef // new in 4x3
     }
 }
