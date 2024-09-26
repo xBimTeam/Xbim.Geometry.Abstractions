@@ -1,6 +1,6 @@
 ﻿namespace Xbim.Geometry.Abstractions
 {
-    public enum IXGeometricContinuity
+    public enum XGeometricContinuity
     {
         /// <summary>
         /// only geometric continuity.

@@ -18,6 +18,20 @@ namespace Xbim.Geometry.Abstractions
         IfcRationalBSplineCurveWithKnots,
         IfcSurfaceCurve,
         IfcTrimmedCurve,
+        
+        // IFC4x3
+        IfcSineSpiral,
+        IfcCosineSpiral,
+        IfcClothoid,
+        IfcSecondOrderPolynomialSpiral,
+        IfcThirdOrderPolynomialSpiral,
+        IfcSeventhOrderPolynomialSpiral,
+        
+        IfcPolynomialCurve,
+        
+        IfcGradientCurve,
+        IfcSegmentedReferenceCurve
+        
     };
 
 }
