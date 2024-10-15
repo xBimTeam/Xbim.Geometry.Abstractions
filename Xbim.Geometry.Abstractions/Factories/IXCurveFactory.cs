@@ -1,4 +1,5 @@
 ﻿using Xbim.Ifc4.Interfaces;
+using Xbim.Ifc4x3.GeometryResource;
 
 namespace Xbim.Geometry.Abstractions
 {
@@ -6,5 +7,6 @@ namespace Xbim.Geometry.Abstractions
     {
         IXCurve Build(IIfcCurve curve);
         IXCurve BuildDirectrix(IIfcCurve curve, double? startParam, double? endParam);
+        IXCurve BuildSpiral(IfcSpiral curve, double startParam, double endParam);
     }
 }
