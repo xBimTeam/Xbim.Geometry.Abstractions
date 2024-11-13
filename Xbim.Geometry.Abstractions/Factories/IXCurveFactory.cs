@@ -7,7 +7,7 @@ namespace Xbim.Geometry.Abstractions
     {
         IXCurve Build(IIfcCurve curve);
         IXCurve BuildDirectrix(IIfcCurve curve, double? startParam, double? endParam);
-        IXSpiral BuildSpiral(IfcSpiral curve, double startParam, double endParam);
+        IXCurve BuildSpiral(IfcSpiral curve, double startParam, double endParam);
         IXCurve BuildPolynomialCurve(IfcPolynomialCurve curve, double startParam, double endParam);
     }
 }
