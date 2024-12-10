@@ -1,7 +1,7 @@
 ﻿
 namespace Xbim.Geometry.Abstractions
 {
-    public interface IXAxisPlacement2d : IXAxisPlacement
+    public interface IXAxis2Placement2d : IXAxisPlacement
     {
         IXPoint Location { get; }
         IXDirection Direction { get; }
