@@ -2,10 +2,7 @@
 {
     public interface IXMatrix 
     {
-
-
         bool IsIdentity { get; }
-      
         double M11 { get; }
         double M12 { get; }
         double M13 { get; }

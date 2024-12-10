@@ -12,6 +12,9 @@
         IfcCylindricalSurface,
         IfcPlane,
         IfcSphericalSurface,
-        IfcToroidalSurface
+        IfcToroidalSurface,
+        // IFC4x3
+        IfcSectionedSurface
+        
     }
 }

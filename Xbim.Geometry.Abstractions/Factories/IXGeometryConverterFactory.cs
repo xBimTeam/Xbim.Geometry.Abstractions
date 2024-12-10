@@ -1,12 +1,12 @@
 ﻿using Microsoft.Extensions.Logging;
 using Xbim.Common;
 using Xbim.Ifc4.Interfaces;
+using Xbim.Ifc4x3.GeometryResource;
 
 namespace Xbim.Geometry.Abstractions
 {
     public interface IXGeometryConverterFactory
     {
-
         /// <summary>
         /// Version 5 Geometry Engine for backward compatibility, now deprecated
         /// </summary>
