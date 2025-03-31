@@ -2,11 +2,11 @@
 {
     public static class IXExtensions
     {
-        public static IXPoint EdgeStartPoint(this IXEdge edge)
+        public static IXPoint? EdgeStartPoint(this IXEdge edge)
         {
             return edge?.EdgeStart?.VertexGeometry;
         }
-        public static IXPoint EdgeEndPoint(this IXEdge edge)
+        public static IXPoint? EdgeEndPoint(this IXEdge edge)
         {
             return edge?.EdgeEnd?.VertexGeometry;
         }

@@ -42,7 +42,7 @@ namespace Xbim.Geometry.Abstractions.Extensions
         /// <param name="key"></param>
         /// <param name="value"></param>
         /// <returns>returnd false if the tag property is not initialised as a KeyValue pair dictionary or the key has not been set with a value</returns>
-        public static bool GetTagValue<T>(this IModel model, string key, out T value)
+        public static bool GetTagValue<T>(this IModel model, string key, out T? value)
         {
             if (model.Tag is not null && model.Tag is IDictionary<string, object> keyValuePairs)
             {
