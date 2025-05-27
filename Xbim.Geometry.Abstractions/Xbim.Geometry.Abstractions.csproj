@@ -22,7 +22,7 @@
     <DelaySign>false</DelaySign>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xbim.Essentials" Version="6.0.506" />
+    <PackageReference Include="Xbim.Essentials" Version="6.0.531-develop" />
   </ItemGroup>
   <ItemGroup>
     <None Update="README.md">
