@@ -22,9 +22,6 @@
     <DelaySign>false</DelaySign>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xbim.Essentials" Version="6.0.531-develop" />
-  </ItemGroup>
-  <ItemGroup>
     <None Update="README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
@@ -37,5 +34,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="../xbim-toolkit-icon.png" Pack="True" PackagePath="\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xbim.Essentials" Version="6.0.534-develop" />
   </ItemGroup>
 </Project>
