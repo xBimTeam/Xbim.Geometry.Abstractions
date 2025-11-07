@@ -36,6 +36,6 @@
     <None Include="../xbim-toolkit-icon.png" Pack="True" PackagePath="\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xbim.Essentials" Version="6.0.557-develop" />
+    <PackageReference Include="Xbim.Essentials" Version="6.0.563" />
   </ItemGroup>
 </Project>
