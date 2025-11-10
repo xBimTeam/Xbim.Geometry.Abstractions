@@ -2,4 +2,4 @@
 
 ## This repo has been migrated into XbimGeometry for code maintenance reasons.
 
-This repo will now be archived.
+See https://github.com/xBimTeam/XbimGeometry/tree/feature/netcore/Xbim.Geometry.Abstractions for the latest code
